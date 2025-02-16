@@ -9,6 +9,7 @@ import KurumsalFourth from '../components/KurumsalFourth';
 export default function KurumsalPage() {
   return (
     <>
+      "test"
       <KurumsalFirst />
       <KurumsalSecond />
       <KurumsalThird />

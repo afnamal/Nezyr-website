@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         style={{ background: ' #E4E4E4' }}
       >
         <Navbar />
-        <main style={{ marginTop: '120px' }}>{children}</main>
+        <main style={{ marginTop: '8px' }}>{children}</main>
       </body>
     </html>
   );
