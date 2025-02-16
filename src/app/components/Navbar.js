@@ -9,6 +9,7 @@ import KurumsalSecond from './KurumsalSecond';
 export default function Navbar() {
   const [language, setLanguage] = useState('TR');
 
+  //s
   return (
     <AppBar
       position="absolute"
