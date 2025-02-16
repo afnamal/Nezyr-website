@@ -5,6 +5,7 @@ import KurumsalFirst from '../components/KurumsalFirst';
 import KurumsalSecond from '../components/KurumsalSecond';
 import KurumsalThird from '../components/KurumsalThird';
 import KurumsalFourth from '../components/KurumsalFourth';
+import SatisIsBirlikleri from '../components/SatisBirlikleri';
 
 export default function KurumsalPage() {
   return (
@@ -14,6 +15,7 @@ export default function KurumsalPage() {
       <KurumsalSecond />
       <KurumsalThird />
       <KurumsalFourth />
+      <SatisIsBirlikleri />
     </>
   );
 }
