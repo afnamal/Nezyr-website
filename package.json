@@ -14,6 +14,7 @@
     "@mui/material": "^6.4.4",
     "kurumsal": "file:",
     "next": "15.1.7",
+    "next-intl": "^3.26.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

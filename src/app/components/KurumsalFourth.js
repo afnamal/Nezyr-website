@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 const projects = [
   {
-    image: '/adidas2.png',
+    image: '/adidas.png',
     title: 'Adidas atık ürünlerinden ileri dönüşüm projeleri',
     link: '#',
   },
@@ -32,9 +32,17 @@ const projects = [
     title: 'Algida çubuklarından ileri dönüşüm Dokuma Tezgahı',
     link: '#',
   },
-  { image: '/60yil.png', title: '60. yıl Özel Tasarımı', link: '#' },
   {
-    image: '/miss-universe.png',
+    image: '/60yil.png',
+    title: (
+      <>
+        60. yıl Özel Tasarımı <br /> &nbsp;
+      </>
+    ),
+    link: '#',
+  },
+  {
+    image: '/miss.png',
     title: 'Kainat Güzellik Yarışması Türkiye Ulusal Kostümleri',
     link: '#',
   },
@@ -49,19 +57,14 @@ export default function KurumsalFourth() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#f0f0f0', // Hafif gri arka plan
+        backgroundColor: '#e5e5e5',
       }}
     >
-      {/* Proje Kartları */}
       <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
-                backgroundColor: '#fff',
-                color: '#000',
-                boxShadow: 'none',
-                border: '1px solid #ddd',
                 p: 2,
               }}
             >
@@ -70,7 +73,7 @@ export default function KurumsalFourth() {
                   width: '100%',
                   height: '150px',
                   position: 'relative',
-                  border: '1px solid black',
+                  border: '1px solid #f2f2f2',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -79,9 +82,8 @@ export default function KurumsalFourth() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={120}
-                  height={80}
-                  style={{ filter: 'invert(1)' }}
+                  width={index == 5 ? 240 : 100}
+                  height={index != 5 ? 50 : 40}
                 />
               </Box>
               <CardContent>
@@ -95,9 +97,11 @@ export default function KurumsalFourth() {
                   href={project.link}
                   sx={{
                     color: '#000',
-                    textDecoration: 'none',
+                    textDecoration: 'underline',
                     fontWeight: 'bold',
                     fontSize: '14px',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
                   }}
                 >
                   Detayları Gör
@@ -108,7 +112,6 @@ export default function KurumsalFourth() {
         ))}
       </Grid>
 
-      {/* "Tüm İş Birliklerini Gör" Butonu */}
       <Button
         variant="outlined"
         sx={{

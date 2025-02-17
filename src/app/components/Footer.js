@@ -21,8 +21,7 @@ export default function Footer() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          width: '80%',
-          maxWidth: '600px',
+          width: '75%',
           marginTop: '20px',
         }}
       >
