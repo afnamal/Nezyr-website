@@ -6,10 +6,6 @@ import {
   Grid,
   TextField,
   Typography,
-  Select,
-  MenuItem,
-  InputLabel,
-  FormControl,
 } from '@mui/material';
 
 export default function ContactForm() {
@@ -19,10 +15,11 @@ export default function ContactForm() {
         position: 'relative',
         width: '100%',
         height: '100vh',
-        backgroundImage: "url('/bg.png')", // **Dosya yolu URL içinde olmalı**
+        backgroundImage: "url('/bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
       }}
@@ -126,6 +123,8 @@ export default function ContactForm() {
           </Grid>
         </Grid>
       </Container>
+
+      {/* Alt Kısım */}
     </Box>
   );
 }
