@@ -1,3 +1,11 @@
+import AyricalikliSatis from '../components/AyricalikliSatis';
+import ModaFirst from '../components/ModaFirst';
+
 export default function About() {
-  return <h1>Moda Sayfası</h1>;
+  return (
+    <>
+      <ModaFirst />
+      <AyricalikliSatis />
+    </>
+  );
 }
