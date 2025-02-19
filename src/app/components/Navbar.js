@@ -6,12 +6,12 @@ import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation('common'); // ✅ Doğru kullanım
-  const [language, setLanguage] = useState(i18n.language || 'tr'); // ✅ Varsayılan dil 'tr'
+  const { t, i18n } = useTranslation('common');
+  const [language, setLanguage] = useState(i18n.language || 'tr');
 
   const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang); // ✅ Doğru kullanım
-    setLanguage(lang); // ✅ State güncelleniyor
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
   };
 
   return (
