@@ -24,7 +24,6 @@ export default function ContactForm() {
         justifyContent: 'center',
       }}
     >
-      {/* Şeffaf Overlay */}
       <Box
         sx={{
           position: 'absolute',
@@ -35,7 +34,6 @@ export default function ContactForm() {
         }}
       ></Box>
 
-      {/* Form Container */}
       <Container
         maxWidth="md"
         sx={{
@@ -64,7 +62,6 @@ export default function ContactForm() {
         </Typography>
 
         <Grid container spacing={2}>
-          {/* Ad & Soyad */}
           <Grid item xs={12} sm={6}>
             <TextField fullWidth label="Adınız" variant="outlined" />
           </Grid>
@@ -72,7 +69,6 @@ export default function ContactForm() {
             <TextField fullWidth label="Soyadınız" variant="outlined" />
           </Grid>
 
-          {/* E-Posta */}
           <Grid item xs={6}>
             <TextField
               fullWidth
@@ -82,7 +78,6 @@ export default function ContactForm() {
             />
           </Grid>
 
-          {/* Telefon */}
           <Grid item xs={6}>
             <TextField
               fullWidth
@@ -92,7 +87,6 @@ export default function ContactForm() {
             />
           </Grid>
 
-          {/* Mesaj */}
           <Grid item xs={12}>
             <TextField
               fullWidth
@@ -103,16 +97,16 @@ export default function ContactForm() {
             />
           </Grid>
 
-          {/* Gönder Butonu */}
           <Grid item xs={12}>
             <Button
-              fullWidth
+              size="small"
               variant="contained"
               sx={{
                 backgroundColor: '#000',
                 color: '#fff',
                 fontWeight: 'bold',
                 padding: '12px',
+                alignContent: 'center',
                 '&:hover': {
                   backgroundColor: '#444',
                 },
@@ -123,8 +117,6 @@ export default function ContactForm() {
           </Grid>
         </Grid>
       </Container>
-
-      {/* Alt Kısım */}
     </Box>
   );
 }
