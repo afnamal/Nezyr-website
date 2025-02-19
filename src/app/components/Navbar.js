@@ -1,15 +1,19 @@
 'use client';
 import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
 import Link from 'next/link';
-import { useState } from 'react';
 import Image from 'next/image';
-import KurumsalFirst from './KurumsalFirst';
-import KurumsalSecond from './KurumsalSecond';
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 export default function Navbar() {
-  const [language, setLanguage] = useState('TR');
+  const { t, i18n } = useTranslation('common'); // ✅ Doğru kullanım
+  const [language, setLanguage] = useState(i18n.language || 'tr'); // ✅ Varsayılan dil 'tr'
 
-  //s
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang); // ✅ Doğru kullanım
+    setLanguage(lang); // ✅ State güncelleniyor
+  };
+
   return (
     <AppBar
       position="absolute"
@@ -26,7 +30,6 @@ export default function Navbar() {
           px: 4,
         }}
       >
-        {/* Logo */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Link href="/">
             <Image
@@ -39,42 +42,40 @@ export default function Navbar() {
           </Link>
         </Box>
 
-        {/* Menü Linkleri */}
         <Box sx={{ display: 'flex', gap: 4 }}>
           <Button
             component={Link}
             href="/kurumsal"
             sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
           >
-            KURUMSAL
+            {t('corporate')}
           </Button>
           <Button
             component={Link}
             href="/sanat"
             sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
           >
-            SANAT
+            {t('art')}
           </Button>
           <Button
             component={Link}
             href="/moda"
             sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
           >
-            MODA
+            {t('fashion')}
           </Button>
         </Box>
 
-        {/* Dil Seçici */}
         <Box sx={{ display: 'flex', gap: 2 }}>
           <Typography
-            onClick={() => setLanguage('TR')}
+            onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
               fontWeight: 'bold',
-              color: language === 'TR' ? 'black' : 'gray',
+              color: language === 'tr' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
-                language === 'TR'
+                language === 'tr'
                   ? {
                       content: '"•"',
                       position: 'absolute',
@@ -88,14 +89,14 @@ export default function Navbar() {
             TR
           </Typography>
           <Typography
-            onClick={() => setLanguage('EN')}
+            onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
               fontWeight: 'bold',
-              color: language === 'EN' ? 'black' : 'gray',
+              color: language === 'en' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
-                language === 'EN'
+                language === 'en'
                   ? {
                       content: '"•"',
                       position: 'absolute',

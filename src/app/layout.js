@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import ContactForm from './components/ContractForm';
 import Footer from './components/Footer';
+import { Providers } from './providers';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -25,10 +26,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}`}
         style={{ background: 'rgb(255, 255, 255)' }}
       >
-        <Navbar />
-        <main style={{ marginTop: '85px' }}>{children}</main>
-        <ContactForm />
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main style={{ marginTop: '85px' }}>{children}</main>
+          <ContactForm />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
