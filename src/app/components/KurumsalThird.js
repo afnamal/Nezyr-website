@@ -1,9 +1,23 @@
 'use client';
 import { Box, Typography, Grid } from '@mui/material';
+import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 
 export default function KurumsalThird() {
+  const { t, i18n } = useTranslation('common');
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    const handleLanguageChange = () => setKey((prevKey) => prevKey + 1);
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
+
   return (
     <Box
+      key={key}
       sx={{
         width: '100%',
         display: 'flex',
@@ -13,7 +27,6 @@ export default function KurumsalThird() {
       }}
     >
       <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
-        {/* Sol Taraf - Büyük Başlık */}
         <Grid
           item
           xs={12}
@@ -25,38 +38,27 @@ export default function KurumsalThird() {
           }}
         >
           <Typography variant="h4" fontWeight="bold" sx={{ color: '#000' }}>
-            SANATTAN İLHAMLA
+            {t('inspired_by_art')}
           </Typography>
           <Typography variant="h4" fontWeight="bold" sx={{ color: '#000' }}>
-            KURUMSAL İŞBİRLİKLERİ
+            {t('corporate_collaborations')}
           </Typography>
         </Grid>
-
-        {/* Sağ Taraf - Açıklama Metni */}
         <Grid item xs={12} md={8}>
           <Typography
             variant="body1"
             sx={{ color: '#333', fontSize: '18px', mb: 2 }}
           >
-            Nezyr Kurumsal iş birliklerinde tasarlanan ürünler, günlük hayatta
-            rahatça kullanılabilecek kıyafetlerden, sanatsal dokunuşlarla
-            bezenmiş dekoratif parçalara kadar geniş bir yelpazeye yayılır.
+            {t('corporate_products_desc')}
           </Typography>
           <Typography
             variant="body1"
             sx={{ color: '#333', fontSize: '18px', mb: 2 }}
           >
-            Fırat Neziroğlu, moda ve sanatı buluşturan geniş kapsamlı kurumsal
-            işbirlikleri ile tanınmaktadır. Sanatçının prestijli markalarla
-            ortak projeler geliştirmiş olması, Nezyr’in küresel marka işbirliği
-            vizyonunu ortaya koyar.
+            {t('firat_neziroglu_desc')}
           </Typography>
           <Typography variant="body1" sx={{ color: '#333', fontSize: '18px' }}>
-            Neziroğlu’nun Halkbank ile yürüttüğü proje Anadolu’nun yerel
-            dokumacılık mirasını desteklemek için kadın girişimciler ile
-            işbirliği yaparak, kadınların sanatsal üretimlerini ve yerel zanaat
-            becerilerini geliştirmeye yönelik eğitim ve destek programları
-            içerir.
+            {t('halkbank_project_desc')}
           </Typography>
         </Grid>
       </Grid>

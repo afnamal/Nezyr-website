@@ -1,10 +1,16 @@
 'use client';
 import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 
 export default function KurumsalSecond() {
+  const { t } = useTranslation('common');
+  const [key] = useState(0);
+
   return (
     <Box
+      key={key}
       sx={{
         width: '100%',
         display: 'flex',
@@ -14,7 +20,6 @@ export default function KurumsalSecond() {
       }}
     >
       <Grid container sx={{ maxWidth: '1200px' }}>
-        {/* Sol Taraf - Metin */}
         <Grid
           item
           xs={12}
@@ -32,18 +37,16 @@ export default function KurumsalSecond() {
               fontWeight="bold"
               sx={{ color: '#000', mb: 1 }}
             >
-              Hem sanatı hem de kültürel zenginliğimizi
+              {t('art_and_culture')}
             </Typography>
             <Typography
               variant="body1"
               sx={{ color: 'gray', fontSize: '18px' }}
             >
-              kurumsal projelere entegre ediyoruz.
+              {t('corporate_projects')}
             </Typography>
           </Box>
         </Grid>
-
-        {/* Sağ Taraf - Resim */}
         <Grid
           item
           xs={12}
@@ -59,7 +62,7 @@ export default function KurumsalSecond() {
             }}
           >
             <Image
-              src="/second-right.jpg" // Eğer farklı isimdeyse değiştir
+              src="/second-right.jpg"
               alt="Kurumsal Sandalye"
               layout="fill"
               objectFit="cover"

@@ -9,6 +9,7 @@ import {
   Button,
 } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
@@ -34,11 +35,7 @@ const projects = [
   },
   {
     image: '/60yil.png',
-    title: (
-      <>
-        60. yıl Özel Tasarımı <br /> &nbsp;
-      </>
-    ),
+    title: '60. yıl Özel Tasarımı',
     link: '#',
   },
   {
@@ -49,6 +46,8 @@ const projects = [
 ];
 
 export default function KurumsalFourth() {
+  const { t } = useTranslation('common');
+
   return (
     <Box
       sx={{
@@ -91,7 +90,7 @@ export default function KurumsalFourth() {
                   variant="body1"
                   sx={{ color: '#000', fontSize: '16px', mb: 2 }}
                 >
-                  {project.title}
+                  {t(project.title)}
                 </Typography>
                 <Link
                   href={project.link}

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Grid } from '@mui/material';
 
 export default function KurumsalFirst() {
-  const { t } = useTranslation('common'); // ✅ Çeviri dosyasını yükle
+  const { t } = useTranslation('common');
 
   return (
     <Grid container spacing={4} alignItems="center">

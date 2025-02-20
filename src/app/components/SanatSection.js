@@ -1,8 +1,11 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export default function SanatSection() {
+  const { t } = useTranslation('common');
+
   return (
     <Box>
       <Box sx={{ width: '100%', position: 'relative', height: '400px' }}>
@@ -25,14 +28,10 @@ export default function SanatSection() {
           fontWeight="bold"
           sx={{ mb: 2, color: 'black' }}
         >
-          NEZYR SANAT
+          {t('nezyr_art')}
         </Typography>
         <Typography variant="body1" sx={{ color: '#444', margin: '0 auto' }}>
-          Nezyr Kurumsal altında hayat bulan ürünler, Fırat Neziroğlu’nun
-          sanatıyla harmanlanmış giysi, aksesuar, mobilya, ev, tekstil ürünleri
-          ve sanatçımızın imzasını taşıyan tasarımlardır. Kültür ve sanat
-          etkinlikleri ise zengin geçmişimizi yaşatarak, geleneksel sanatları ve
-          evrensel değerleri günümüzle buluşturur.
+          {t('nezyr_art_description')}
         </Typography>
       </Container>
     </Box>

@@ -7,8 +7,11 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactForm() {
+  const { t } = useTranslation('common');
+
   return (
     <Box
       sx={{
@@ -50,29 +53,28 @@ export default function ContactForm() {
           textAlign="center"
           sx={{ mb: 2, color: '#000' }}
         >
-          BİZE ULAŞIN
+          {t('contact_us')}
         </Typography>
         <Typography
           variant="body1"
           textAlign="center"
           sx={{ mb: 4, color: '#444' }}
         >
-          Commodo litora libero elit, id in hendrerit erat tempus. Finibus cras
-          faucibus massa mauris duis; class ad hac praesent.
+          {t('contact_description')}
         </Typography>
 
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label="Adınız" variant="outlined" />
+            <TextField fullWidth label={t('name')} variant="outlined" />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label="Soyadınız" variant="outlined" />
+            <TextField fullWidth label={t('surname')} variant="outlined" />
           </Grid>
 
           <Grid item xs={6}>
             <TextField
               fullWidth
-              label="E-posta"
+              label={t('email')}
               type="email"
               variant="outlined"
             />
@@ -81,7 +83,7 @@ export default function ContactForm() {
           <Grid item xs={6}>
             <TextField
               fullWidth
-              label="Cep Telefonu"
+              label={t('phone')}
               type="tel"
               variant="outlined"
             />
@@ -90,7 +92,7 @@ export default function ContactForm() {
           <Grid item xs={12}>
             <TextField
               fullWidth
-              label="Mesajınız"
+              label={t('message')}
               variant="outlined"
               multiline
               rows={4}
@@ -112,7 +114,7 @@ export default function ContactForm() {
                 },
               }}
             >
-              Gönder
+              {t('send')}
             </Button>
           </Grid>
         </Grid>

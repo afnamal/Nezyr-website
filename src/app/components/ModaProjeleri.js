@@ -1,8 +1,11 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export default function ModaProjeleri() {
+  const { t } = useTranslation('common');
+
   return (
     <Container sx={{ py: 8 }}>
       <Grid container spacing={6} alignItems="flex-start">
@@ -28,12 +31,7 @@ export default function ModaProjeleri() {
             variant="body1"
             sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
           >
-            Fırat Neziroğlu’nun yurt dışında katıldığı en dikkat çekici
-            projelerden biri, İngiltere Kraliçesi II. Elizabeth’in portresini
-            yaratmasıdır. Bu projede sanatçı, dokuma sanatındaki yenilikçi
-            tekniğini kullanarak Kraliçe’nin portresini dokuma sanatıyla
-            betimlemiş ve eserini 2019'da Kraliçe için özel olarak
-            tasarlamıştır.
+            {t('queen_elizabeth_portrait')}
           </Typography>
         </Grid>
 
@@ -59,9 +57,7 @@ export default function ModaProjeleri() {
             variant="body1"
             sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
           >
-            New York Moda Haftası’nda YEN koleksiyonu ile Anatolia temalı
-            kıyafetlerini sergilemiş ve geleneksel el sanatlarını modern
-            tasarımlarla harmanlamıştır.
+            {t('new_york_fashion_week')}
           </Typography>
         </Grid>
       </Grid>

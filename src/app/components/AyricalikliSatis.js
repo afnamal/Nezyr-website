@@ -1,8 +1,11 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export default function AyricalikliSatis() {
+  const { t } = useTranslation('common');
+
   return (
     <Container sx={{ py: 6 }}>
       <Typography
@@ -11,7 +14,7 @@ export default function AyricalikliSatis() {
         textAlign="center"
         sx={{ mb: 4, color: 'black' }}
       >
-        AYRICALIKLI SATIŞ İŞ BİRLİKLERİ
+        {t('exclusive_sales_partnerships')}
       </Typography>
 
       <Grid container spacing={4} alignItems="center">
@@ -63,20 +66,13 @@ export default function AyricalikliSatis() {
             variant="body1"
             sx={{ color: '#333', fontSize: '16px', lineHeight: 1.6 }}
           >
-            Sanatçımızın eserleri Sotheby’s, Christie’s ve New York’taki C24
-            Gallery gibi saygın uluslararası galerilerde düzenli olarak
-            sergilenmekte ve müzayedelere çıkmaktadır. Türkiye’de ise
-            Contemporary Istanbul, Anna Laudel ve Akbank Sanat gibi galerilerde
-            sanatseverlerle buluşmaktadır.
+            {t('exclusive_sales_description_1')}
           </Typography>
           <Typography
             variant="body1"
             sx={{ color: '#333', fontSize: '16px', mt: 2, lineHeight: 1.6 }}
           >
-            Galleries Lafayette, Brandroom, Harvey Nichols, Salut gibi
-            mağazalarda Neziroğlu tasarımlarının satış işbirlikleri sürmekte
-            olup, Nezyr’in yaratacağı geniş satış ağı ile yurt içi ve yurtdışı
-            işbirliği çalışmaları devam etmektedir.
+            {t('exclusive_sales_description_2')}
           </Typography>
 
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>

@@ -1,8 +1,11 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export default function OzelProjeler() {
+  const { t } = useTranslation('common');
+
   return (
     <Box
       sx={{
@@ -16,7 +19,7 @@ export default function OzelProjeler() {
           fontWeight="bold"
           sx={{ mb: 6, textAlign: 'center', color: 'black' }}
         >
-          ÖZEL PROJELER
+          {t('special_projects')}
         </Typography>
 
         <Grid container spacing={4} alignItems="flex-start">
@@ -42,12 +45,7 @@ export default function OzelProjeler() {
               variant="body1"
               sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
             >
-              Neziroğlu’nun uluslararası projeleri arasında Tayland kraliçesi
-              için dokuma kumaş tasarımları ve Londra’da Christie’s gibi
-              prestijli müzayede evlerinde eser satışları yer almakta. Yine yurt
-              dışında Katar ve Norveç Kraliyet Aileleri için özel eserler
-              tasarlayarak Anadolu'nun zengin dokuma mirasını farklı kültürlere
-              taşımanın gururunu yaşamaktadır.
+              {t('special_projects_description_1')}
             </Typography>
           </Grid>
 
@@ -72,13 +70,7 @@ export default function OzelProjeler() {
               variant="body1"
               sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
             >
-              Octopus platformuyla yapılan iş birliği, Neziroğlu’nun NFT
-              eserlerini fiziksel dünyaya taşıyarak Contemporary İstanbul'da
-              büyük ilgi görmüştür. Neziroğlu’nun eserleri yalnızca Türkiye'de
-              değil, New York'taki C24 Gallery gibi uluslararası galerilerde de
-              sergilenmektedir. Sanatçı aynı zamanda Türkiye’nin Kuzey Kutbu'na
-              yönelik tasarlayacağı kıyafetlerde kumaş tasarım danışmanlığı da
-              yapmaktadır.
+              {t('special_projects_description_2')}
             </Typography>
           </Grid>
         </Grid>

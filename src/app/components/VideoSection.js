@@ -1,14 +1,17 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function VideoSection() {
+  const { t } = useTranslation('common');
+
   return (
     <Container sx={{ textAlign: 'center', py: 6 }}>
       <Typography variant="body2" sx={{ color: 'gray', mb: 1 }}>
-        12.12.2021
+        {t('video_date')}
       </Typography>
       <Typography variant="h5" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
-        FIRAT NEZİROĞLU & TILIA İŞ BİRLİĞİ
+        {t('firat_neziroglu_tilia')}
       </Typography>
 
       <Box
@@ -47,10 +50,7 @@ export default function VideoSection() {
           lineHeight: 1.6,
         }}
       >
-        Demokratik tasarım ilkesi ile ulaşılabilir tasarımlarını, doğaya, insana
-        ve her alanda iyi olmaya verdiği önemle birleştiren Tilia, 60. yılını
-        aynı değerlerde buluştuğu sanatçı Fırat Neziroğlu iş birliği ile
-        kutluyor.
+        {t('video_description_1')}
       </Typography>
 
       <Typography
@@ -64,11 +64,7 @@ export default function VideoSection() {
           lineHeight: 1.6,
         }}
       >
-        Altmış yıl önce, iyi tasarlanmış, benzersiz, ihtiyaçları doğru anlayan,
-        kaliteli ve erişilebilir ürünler üretme vizyonuyla yola çıkan Tilia,
-        hayatın akışı içinde gerçek ihtiyaçlara cevap verebilme yeteneğini,
-        Uluslararası Dokuma Sanatçısı Fırat Neziroğlu’nun yeteneği ile
-        birleştirdi.
+        {t('video_description_2')}
       </Typography>
 
       <Typography
@@ -82,9 +78,7 @@ export default function VideoSection() {
           fontWeight: 'bold',
         }}
       >
-        Sanatçı Fırat Neziroğlu’nun Tilia’nın 60. yılına özel gerçekleştirdiği
-        tasarım sandalye <strong>“Balance – Denge”</strong> tasarım severlerin
-        beğenisine sunuldu.
+        {t('video_description_3')}
       </Typography>
     </Container>
   );
