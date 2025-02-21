@@ -28,7 +28,7 @@ export default function SatisIsBirlikleri() {
               padding: 2,
             }}
           >
-            <Box sx={{ position: 'relative', width: '300px', height: '100px' }}>
+            <Box sx={{ position: 'relative', width: '500px', height: '100px' }}>
               <Image
                 src={logo.src}
                 alt={logo.alt}

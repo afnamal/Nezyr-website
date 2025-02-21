@@ -20,12 +20,15 @@ export default function Footer() {
       <Box
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
+          alignItems: 'center',
           width: '75%',
           marginTop: '20px',
+          gap: { xs: '15px', md: '0px' },
         }}
       >
-        <Box sx={{ textAlign: 'left' }}>
+        <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           <Typography variant="body1" fontWeight="bold" color="black">
             İletişim:
           </Typography>
@@ -37,7 +40,7 @@ export default function Footer() {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', gap: '15px' }}>
+        <Box sx={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
           <a
             href="https://instagram.com"
             target="_blank"
@@ -76,7 +79,6 @@ export default function Footer() {
         </Box>
       </Box>
 
-      {/* Telif Hakkı */}
       <Typography variant="body2" sx={{ color: '#777', marginTop: '20px' }}>
         © 2020 Nezyr, Inc. All rights reserved
       </Typography>

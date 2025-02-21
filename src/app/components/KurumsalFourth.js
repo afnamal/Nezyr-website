@@ -56,7 +56,6 @@ export default function KurumsalFourth() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#e5e5e5',
       }}
     >
       <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
@@ -65,6 +64,9 @@ export default function KurumsalFourth() {
             <Card
               sx={{
                 p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
               }}
             >
               <Box
@@ -81,11 +83,18 @@ export default function KurumsalFourth() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={index == 5 ? 240 : 100}
+                  width={index == 5 ? 240 : 80}
                   height={index != 5 ? 50 : 40}
                 />
               </Box>
-              <CardContent>
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <Typography
                   variant="body1"
                   sx={{ color: '#000', fontSize: '16px', mb: 2 }}
@@ -97,7 +106,6 @@ export default function KurumsalFourth() {
                   sx={{
                     color: '#000',
                     textDecoration: 'underline',
-                    fontWeight: 'bold',
                     fontSize: '14px',
                     display: 'flex',
                     justifyContent: 'flex-end',

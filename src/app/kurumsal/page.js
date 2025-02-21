@@ -10,7 +10,6 @@ import SatisIsBirlikleri from '../components/SatisBirlikleri';
 export default function KurumsalPage() {
   return (
     <>
-      "test"
       <KurumsalFirst />
       <KurumsalSecond />
       <KurumsalThird />

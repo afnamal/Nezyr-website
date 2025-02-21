@@ -37,10 +37,10 @@ export default function KurumsalThird() {
             justifyContent: 'flex-start',
           }}
         >
-          <Typography variant="h4" fontWeight="bold" sx={{ color: '#000' }}>
+          <Typography variant="h4" sx={{ color: '#000' }}>
             {t('inspired_by_art')}
           </Typography>
-          <Typography variant="h4" fontWeight="bold" sx={{ color: '#000' }}>
+          <Typography variant="h4" sx={{ color: '#000' }}>
             {t('corporate_collaborations')}
           </Typography>
         </Grid>

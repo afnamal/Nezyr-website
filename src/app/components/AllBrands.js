@@ -75,7 +75,6 @@ export default function AllBrands() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: '#e5e5e5',
       }}
     >
       <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>

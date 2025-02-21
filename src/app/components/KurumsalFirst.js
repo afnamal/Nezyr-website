@@ -1,21 +1,30 @@
 'use client';
-import { AppBar, Toolbar, Box, Button, Typography } from '@mui/material';
-import Link from 'next/link';
+import { Grid, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { Grid } from '@mui/material';
 
 export default function KurumsalFirst() {
   const { t } = useTranslation('common');
 
   return (
-    <Grid container spacing={4} alignItems="center">
-      <Grid item xs={12} md={3}>
+    <Grid container spacing={0} alignItems="center">
+      <Grid
+        item
+        xs={6}
+        md={3}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          order: { xs: 1, md: 1 },
+          padding: 0,
+          margin: 0,
+        }}
+      >
         <Box
           sx={{
             position: 'relative',
-            width: '100%',
-            height: '100%',
+            width: { xs: '50vw', md: '100%' },
+            height: 'auto',
             display: 'flex',
           }}
         >
@@ -23,18 +32,57 @@ export default function KurumsalFirst() {
             src="/first-left.png"
             alt="Kurumsal Sol Görsel"
             layout="responsive"
-            width={400}
+            width={500}
             height={500}
             objectFit="cover"
           />
         </Box>
       </Grid>
 
-      <Grid item xs={12} md={6} sx={{ textAlign: 'center' }}>
+      <Grid
+        item
+        xs={6}
+        md={3}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          order: { xs: 2, md: 3 },
+          padding: 0,
+          margin: 0,
+        }}
+      >
+        <Box
+          sx={{
+            position: 'relative',
+            width: { xs: '50vw', md: '100%' },
+            height: 'auto',
+            display: 'flex',
+          }}
+        >
+          <Image
+            src="/first-right.png"
+            alt="Kurumsal Sağ Görsel"
+            layout="responsive"
+            width={500}
+            height={500}
+            objectFit="cover"
+          />
+        </Box>
+      </Grid>
+
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{
+          px: 2,
+          order: { xs: 3, md: 2 },
+        }}
+      >
         <Typography
           variant="h5"
           fontWeight="bold"
-          sx={{ mb: 2, color: 'black' }}
+          sx={{ mb: 2, color: 'black', textAlign: 'center' }}
         >
           {t('corporate_partnerships')}
         </Typography>
@@ -50,19 +98,6 @@ export default function KurumsalFirst() {
         >
           {t('corporate_desc_2')}
         </Typography>
-      </Grid>
-
-      <Grid item xs={12} md={3}>
-        <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
-          <Image
-            src="/first-right.png"
-            alt="Kurumsal Sağ Görsel"
-            layout="responsive"
-            width={400}
-            height={500}
-            objectFit="cover"
-          />
-        </Box>
       </Grid>
     </Grid>
   );

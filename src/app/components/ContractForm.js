@@ -25,6 +25,7 @@ export default function ContactForm() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: '20px', // Mobilde içerik sıkışmasın
       }}
     >
       <Box
@@ -32,8 +33,6 @@ export default function ContactForm() {
           position: 'absolute',
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
-          backdropFilter: 'blur(5px)',
         }}
       ></Box>
 
@@ -41,83 +40,137 @@ export default function ContactForm() {
         maxWidth="md"
         sx={{
           position: 'relative',
-          backgroundColor: 'white',
+          backgroundColor: 'rgba(255, 253, 253, 0.65)',
+          backdropFilter: 'blur(3px)',
           padding: '40px',
-          borderRadius: '8px',
+          borderRadius: '10px',
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
+          width: '90%',
+          maxWidth: '500px',
+          minHeight: '600px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
-        <Typography
-          variant="h5"
-          fontWeight="bold"
-          textAlign="center"
-          sx={{ mb: 2, color: '#000' }}
+        <Box
+          sx={{
+            width: { xs: '100%', md: '70%' },
+            textAlign: 'center',
+          }}
         >
-          {t('contact_us')}
-        </Typography>
-        <Typography
-          variant="body1"
-          textAlign="center"
-          sx={{ mb: 4, color: '#444' }}
-        >
-          {t('contact_description')}
-        </Typography>
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ mb: 2, color: '#000' }}
+          >
+            {t('contact_us')}
+          </Typography>
+          <Typography
+            variant="body1"
+            textAlign="center"
+            sx={{ mb: 4, color: '#444', fontSize: '14px' }}
+          >
+            {t('contact_description')}
+          </Typography>
 
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <TextField fullWidth label={t('name')} variant="outlined" />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField fullWidth label={t('surname')} variant="outlined" />
-          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                label={t('name')}
+                variant="outlined"
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  fontSize: '14px',
+                }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                label={t('surname')}
+                variant="outlined"
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  fontSize: '14px',
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              label={t('email')}
-              type="email"
-              variant="outlined"
-            />
-          </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                fullWidth
+                label={t('email')}
+                type="email"
+                variant="outlined"
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  fontSize: '14px',
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              label={t('phone')}
-              type="tel"
-              variant="outlined"
-            />
-          </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                fullWidth
+                label={t('phone')}
+                type="tel"
+                variant="outlined"
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  fontSize: '14px',
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label={t('message')}
-              variant="outlined"
-              multiline
-              rows={4}
-            />
-          </Grid>
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                label={t('message')}
+                variant="outlined"
+                multiline
+                rows={4}
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '6px',
+                  fontSize: '14px',
+                }}
+              />
+            </Grid>
 
-          <Grid item xs={12}>
-            <Button
-              size="small"
-              variant="contained"
-              sx={{
-                backgroundColor: '#000',
-                color: '#fff',
-                fontWeight: 'bold',
-                padding: '12px',
-                alignContent: 'center',
-                '&:hover': {
-                  backgroundColor: '#444',
-                },
-              }}
+            <Grid
+              item
+              xs={12}
+              sx={{ display: 'flex', justifyContent: 'center' }}
             >
-              {t('send')}
-            </Button>
+              <Button
+                fullWidth
+                size="medium"
+                variant="contained"
+                sx={{
+                  backgroundColor: '#000',
+                  color: '#fff',
+                  fontWeight: 'bold',
+                  padding: '12px',
+                  maxWidth: '140px',
+                  fontSize: '14px',
+                  '&:hover': {
+                    backgroundColor: '#444',
+                  },
+                }}
+              >
+                {t('send')}
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );
