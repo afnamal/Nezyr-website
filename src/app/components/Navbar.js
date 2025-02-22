@@ -79,7 +79,7 @@ export default function Navbar() {
                   ? {
                       content: '"•"',
                       position: 'absolute',
-                      bottom: '-5px',
+                      bottom: '-10px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                     }
@@ -100,7 +100,7 @@ export default function Navbar() {
                   ? {
                       content: '"•"',
                       position: 'absolute',
-                      bottom: '-5px',
+                      bottom: '-10px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                     }

@@ -35,7 +35,7 @@ const projects = [
   },
   {
     image: '/60yil.png',
-    title: '60. yıl Özel Tasarımı ',
+    title: '60. yıl Özel Tasarımı',
     link: '#',
   },
   {
@@ -67,6 +67,7 @@ const projects = [
 
 export default function AllBrands() {
   const { t } = useTranslation('common');
+
   return (
     <Box
       sx={{
@@ -83,6 +84,9 @@ export default function AllBrands() {
             <Card
               sx={{
                 p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
               }}
             >
               <Box
@@ -99,11 +103,24 @@ export default function AllBrands() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={index == 5 ? 240 : 100}
+                  width={
+                    index == 5
+                      ? 240
+                      : index == 6 || index == 7 || index == 8
+                      ? 120
+                      : 80
+                  }
                   height={index != 5 ? 50 : 40}
                 />
               </Box>
-              <CardContent>
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <Typography
                   variant="body1"
                   sx={{ color: '#000', fontSize: '16px', mb: 2 }}
@@ -115,7 +132,6 @@ export default function AllBrands() {
                   sx={{
                     color: '#000',
                     textDecoration: 'underline',
-                    fontWeight: 'bold',
                     fontSize: '14px',
                     display: 'flex',
                     justifyContent: 'flex-end',
@@ -128,6 +144,26 @@ export default function AllBrands() {
           </Grid>
         ))}
       </Grid>
+
+      <Button
+        variant="outlined"
+        sx={{
+          mt: 4,
+          px: 4,
+          py: 1,
+          border: '1px solid black',
+          color: '#000',
+          fontWeight: 'bold',
+          fontSize: '16px',
+          textTransform: 'none',
+          '&:hover': {
+            backgroundColor: '#000',
+            color: '#fff',
+          },
+        }}
+      >
+        Tüm İş Birliklerini Gör
+      </Button>
     </Box>
   );
 }
