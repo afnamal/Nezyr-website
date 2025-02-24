@@ -34,6 +34,7 @@ export default function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
+  console.log(pathname);
   return (
     <AppBar
       position="absolute"
@@ -68,7 +69,7 @@ export default function Navbar() {
             href="/kurumsal"
             sx={{
               color: 'black',
-              fontWeight: pathname === '/kurumsal' ? 'bold' : 'normal',
+              fontWeight: pathname == '/kurumsal' ? 'bold' : 'normal',
               fontSize: '16px',
             }}
           >
@@ -79,7 +80,7 @@ export default function Navbar() {
             href="/sanat"
             sx={{
               color: 'black',
-              fontWeight: pathname === '/sanat' ? 'bold' : 'normal',
+              fontWeight: pathname == '/sanat' ? 'bold' : 'normal',
               fontSize: '16px',
             }}
           >
@@ -90,7 +91,7 @@ export default function Navbar() {
             href="/moda"
             sx={{
               color: 'black',
-              fontWeight: pathname === '/moda' ? 'bold' : 'normal',
+              fontWeight: pathname == '/moda' ? 'bold' : 'normal',
               fontSize: '16px',
             }}
           >
@@ -103,8 +104,19 @@ export default function Navbar() {
             onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
-              fontWeight: language === 'tr' ? 'bold' : 'normal',
+              fontWeight: 'bold',
               color: language === 'tr' ? 'black' : 'gray',
+              position: 'relative',
+              '&::after':
+                language === 'tr'
+                  ? {
+                      content: '"•"',
+                      position: 'absolute',
+                      bottom: '-10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                    }
+                  : {},
             }}
           >
             TR
@@ -113,8 +125,19 @@ export default function Navbar() {
             onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
-              fontWeight: language === 'en' ? 'bold' : 'normal',
+              fontWeight: 'bold',
               color: language === 'en' ? 'black' : 'gray',
+              position: 'relative',
+              '&::after':
+                language === 'en'
+                  ? {
+                      content: '"•"',
+                      position: 'absolute',
+                      bottom: '-10px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                    }
+                  : {},
             }}
           >
             EN
@@ -141,7 +164,7 @@ export default function Navbar() {
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'space-between',
+            position: 'relative',
           },
         }}
       >
@@ -160,48 +183,75 @@ export default function Navbar() {
           </IconButton>
         </Box>
 
-        <List>
+        <List sx={{ pl: 2, mt: 3 }}>
           <ListItem component="a" href="/kurumsal">
-            <ListItemText
-              primary={t('corporate')}
-              sx={{ fontWeight: pathname === '/kurumsal' ? 'bold' : 'normal' }}
-            />
+            <ListItemText primary={t('corporate')} />
           </ListItem>
           <ListItem component="a" href="/sanat">
-            <ListItemText
-              primary={t('art')}
-              sx={{ fontWeight: pathname === '/sanat' ? 'bold' : 'normal' }}
-            />
+            <ListItemText primary={t('art')} />
           </ListItem>
           <ListItem component="a" href="/moda">
-            <ListItemText
-              primary={t('fashion')}
-              sx={{ fontWeight: pathname === '/moda' ? 'bold' : 'normal' }}
-            />
+            <ListItemText primary={t('fashion')} />
           </ListItem>
         </List>
 
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
-          <Typography
-            onClick={() => changeLanguage('tr')}
-            sx={{
-              cursor: 'pointer',
-              fontWeight: language === 'tr' ? 'bold' : 'normal',
-              color: language === 'tr' ? 'black' : 'gray',
-            }}
-          >
-            TR
-          </Typography>
-          <Typography
-            onClick={() => changeLanguage('en')}
-            sx={{
-              cursor: 'pointer',
-              fontWeight: language === 'en' ? 'bold' : 'normal',
-              color: language === 'en' ? 'black' : 'gray',
-            }}
-          >
-            EN
-          </Typography>
+        <Box
+          sx={{
+            width: '100%',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            textAlign: 'start',
+            pb: 2,
+          }}
+        >
+          <Box sx={{ width: '100%', borderBottom: '1px solid gray', mb: 2 }} />
+          <Box sx={{ display: 'flex', gap: 4 }}>
+            <Typography
+              onClick={() => changeLanguage('tr')}
+              sx={{
+                ml: 2,
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                color: language === 'tr' ? 'black' : 'gray',
+                position: 'relative',
+                '&::after':
+                  language === 'tr'
+                    ? {
+                        content: '"•"',
+                        position: 'absolute',
+                        bottom: '-10px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                      }
+                    : {},
+              }}
+            >
+              TR
+            </Typography>
+            <Typography
+              onClick={() => changeLanguage('en')}
+              sx={{
+                ml: 2,
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                color: language === 'en' ? 'black' : 'gray',
+                position: 'relative',
+                '&::after':
+                  language === 'en'
+                    ? {
+                        content: '"•"',
+                        position: 'absolute',
+                        bottom: '-10px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                      }
+                    : {},
+              }}
+            >
+              EN
+            </Typography>
+          </Box>
         </Box>
       </Drawer>
     </AppBar>
