@@ -8,7 +8,7 @@ export default function ModaProjeleri() {
 
   return (
     <Container sx={{ py: 8 }}>
-      <Grid container spacing={6} alignItems="flex-start">
+      <Grid container spacing={6} alignItems="center">
         <Grid
           item
           xs={12}

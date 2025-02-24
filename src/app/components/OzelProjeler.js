@@ -22,7 +22,7 @@ export default function OzelProjeler() {
           {t('special_projects')}
         </Typography>
 
-        <Grid container spacing={4} alignItems="flex-start">
+        <Grid container spacing={4} alignItems="center">
           <Grid
             item
             xs={12}
