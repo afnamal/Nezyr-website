@@ -17,7 +17,7 @@ export default function VideoSection() {
       <Box
         sx={{
           width: '100%',
-          maxWidth: '600px',
+          maxWidth: '900px',
           margin: '0 auto',
           aspectRatio: '16/9',
           backgroundColor: '#000',
@@ -44,7 +44,6 @@ export default function VideoSection() {
         sx={{
           mt: 4,
           textAlign: 'justify',
-          maxWidth: '800px',
           margin: '0 auto',
           color: '#333',
           lineHeight: 1.6,
@@ -58,7 +57,6 @@ export default function VideoSection() {
         sx={{
           mt: 2,
           textAlign: 'justify',
-          maxWidth: '800px',
           margin: '0 auto',
           color: '#333',
           lineHeight: 1.6,
@@ -72,7 +70,6 @@ export default function VideoSection() {
         sx={{
           mt: 2,
           textAlign: 'justify',
-          maxWidth: '800px',
           margin: '0 auto',
           color: '#333',
           fontWeight: 'bold',

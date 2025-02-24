@@ -6,7 +6,7 @@ import SanatSection from '../components/SanatSection';
 import SanatTImg from '../components/SanatTImg';
 import VideoSection from '../components/VideoSection';
 
-export default function About() {
+export default function Sanat() {
   return (
     <>
       <SanatSection />
@@ -15,7 +15,6 @@ export default function About() {
       <SanatEtkinlikleri />
       <AllBrands />
       <SanatTImg />
-      <VideoSection />
     </>
   );
 }
