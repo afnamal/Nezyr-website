@@ -1,17 +1,37 @@
 'use client';
-import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+} from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation('common');
   const [language, setLanguage] = useState(i18n.language || 'tr');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setLanguage(lang);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -42,48 +62,49 @@ export default function Navbar() {
           </Link>
         </Box>
 
-        <Box sx={{ display: 'flex', gap: 4 }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4 }}>
           <Button
             component={Link}
             href="/kurumsal"
-            sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
+            sx={{
+              color: 'black',
+              fontWeight: pathname === '/kurumsal' ? 'bold' : 'normal',
+              fontSize: '16px',
+            }}
           >
             {t('corporate')}
           </Button>
           <Button
             component={Link}
             href="/sanat"
-            sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
+            sx={{
+              color: 'black',
+              fontWeight: pathname === '/sanat' ? 'bold' : 'normal',
+              fontSize: '16px',
+            }}
           >
             {t('art')}
           </Button>
           <Button
             component={Link}
             href="/moda"
-            sx={{ color: 'black', fontWeight: 'bold', fontSize: '16px' }}
+            sx={{
+              color: 'black',
+              fontWeight: pathname === '/moda' ? 'bold' : 'normal',
+              fontSize: '16px',
+            }}
           >
             {t('fashion')}
           </Button>
         </Box>
 
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
           <Typography
             onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
-              fontWeight: 'bold',
+              fontWeight: language === 'tr' ? 'bold' : 'normal',
               color: language === 'tr' ? 'black' : 'gray',
-              position: 'relative',
-              '&::after':
-                language === 'tr'
-                  ? {
-                      content: '"•"',
-                      position: 'absolute',
-                      bottom: '-10px',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                    }
-                  : {},
             }}
           >
             TR
@@ -92,25 +113,97 @@ export default function Navbar() {
             onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
-              fontWeight: 'bold',
+              fontWeight: language === 'en' ? 'bold' : 'normal',
               color: language === 'en' ? 'black' : 'gray',
-              position: 'relative',
-              '&::after':
-                language === 'en'
-                  ? {
-                      content: '"•"',
-                      position: 'absolute',
-                      bottom: '-10px',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                    }
-                  : {},
             }}
           >
             EN
           </Typography>
         </Box>
+
+        <IconButton
+          sx={{ display: { xs: 'flex', md: 'none' } }}
+          onClick={toggleMenu}
+        >
+          <MenuIcon sx={{ fontSize: 32, color: 'black' }} />
+        </IconButton>
       </Toolbar>
+
+      <Drawer
+        anchor="right"
+        open={menuOpen}
+        onClose={toggleMenu}
+        sx={{
+          '& .MuiDrawer-paper': {
+            width: '100%',
+            backgroundColor: 'white',
+            padding: 2,
+            height: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          },
+        }}
+      >
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', px: 2 }}>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="NEZYR Logo"
+              width={100}
+              height={50}
+              priority
+            />
+          </Link>
+          <IconButton onClick={toggleMenu}>
+            <CloseIcon sx={{ fontSize: 32, color: 'black' }} />
+          </IconButton>
+        </Box>
+
+        <List>
+          <ListItem component="a" href="/kurumsal">
+            <ListItemText
+              primary={t('corporate')}
+              sx={{ fontWeight: pathname === '/kurumsal' ? 'bold' : 'normal' }}
+            />
+          </ListItem>
+          <ListItem component="a" href="/sanat">
+            <ListItemText
+              primary={t('art')}
+              sx={{ fontWeight: pathname === '/sanat' ? 'bold' : 'normal' }}
+            />
+          </ListItem>
+          <ListItem component="a" href="/moda">
+            <ListItemText
+              primary={t('fashion')}
+              sx={{ fontWeight: pathname === '/moda' ? 'bold' : 'normal' }}
+            />
+          </ListItem>
+        </List>
+
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
+          <Typography
+            onClick={() => changeLanguage('tr')}
+            sx={{
+              cursor: 'pointer',
+              fontWeight: language === 'tr' ? 'bold' : 'normal',
+              color: language === 'tr' ? 'black' : 'gray',
+            }}
+          >
+            TR
+          </Typography>
+          <Typography
+            onClick={() => changeLanguage('en')}
+            sx={{
+              cursor: 'pointer',
+              fontWeight: language === 'en' ? 'bold' : 'normal',
+              color: language === 'en' ? 'black' : 'gray',
+            }}
+          >
+            EN
+          </Typography>
+        </Box>
+      </Drawer>
     </AppBar>
   );
 }

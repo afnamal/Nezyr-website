@@ -25,7 +25,7 @@ export default function ContactForm() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '20px', // Mobilde içerik sıkışmasın
+        padding: '20px',
       }}
     >
       <Box
