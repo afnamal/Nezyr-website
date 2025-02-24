@@ -1,7 +1,10 @@
 'use client';
 import { Box, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation('common');
+
   return (
     <Box
       sx={{
@@ -30,7 +33,7 @@ export default function Footer() {
       >
         <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           <Typography variant="body1" fontWeight="bold" color="black">
-            İletişim:
+            {t('contact')}
           </Typography>
           <Typography color="black" variant="body2">
             0212 345 56 67
@@ -80,7 +83,7 @@ export default function Footer() {
       </Box>
 
       <Typography variant="body2" sx={{ color: '#777', marginTop: '20px' }}>
-        © 2020 Nezyr, Inc. All rights reserved
+        {t('copyright', { year: new Date().getFullYear() })}
       </Typography>
     </Box>
   );
