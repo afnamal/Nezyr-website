@@ -70,7 +70,7 @@ export default function Footer() {
               style={{ cursor: 'pointer' }}
             />
           </a>
-          <a href="#" onClick={() => console.log('Twitter butonu tıklandı')}>
+          <a href="#">
             <img
               src="/twitter.png"
               alt="Twitter"
@@ -83,7 +83,7 @@ export default function Footer() {
       </Box>
 
       <Typography variant="body2" sx={{ color: '#777', marginTop: '20px' }}>
-        {t('copyright', { year: new Date().getFullYear() })}
+        {t('copyright')}
       </Typography>
     </Box>
   );

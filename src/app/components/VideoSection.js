@@ -38,45 +38,46 @@ export default function VideoSection() {
           allowFullScreen
         ></iframe>
       </Box>
+      <Box sx={{ mt: 7 }}>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 4,
+            textAlign: 'justify',
+            margin: '0 auto',
+            color: '#333',
+            lineHeight: 1.6,
+          }}
+        >
+          {t('video_description_1')}
+        </Typography>
 
-      <Typography
-        variant="body1"
-        sx={{
-          mt: 4,
-          textAlign: 'justify',
-          margin: '0 auto',
-          color: '#333',
-          lineHeight: 1.6,
-        }}
-      >
-        {t('video_description_1')}
-      </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 2,
+            textAlign: 'justify',
+            margin: '0 auto',
+            color: '#333',
+            lineHeight: 1.6,
+          }}
+        >
+          {t('video_description_2')}
+        </Typography>
 
-      <Typography
-        variant="body1"
-        sx={{
-          mt: 2,
-          textAlign: 'justify',
-          margin: '0 auto',
-          color: '#333',
-          lineHeight: 1.6,
-        }}
-      >
-        {t('video_description_2')}
-      </Typography>
-
-      <Typography
-        variant="body1"
-        sx={{
-          mt: 2,
-          textAlign: 'justify',
-          margin: '0 auto',
-          color: '#333',
-          fontWeight: 'bold',
-        }}
-      >
-        {t('video_description_3')}
-      </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mt: 2,
+            textAlign: 'justify',
+            margin: '0 auto',
+            color: '#333',
+            fontWeight: 'bold',
+          }}
+        >
+          {t('video_description_3')}
+        </Typography>
+      </Box>
     </Container>
   );
 }

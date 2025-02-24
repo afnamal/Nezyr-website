@@ -34,7 +34,6 @@ export default function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
-  console.log(pathname);
   return (
     <AppBar
       position="absolute"
@@ -56,7 +55,7 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={100}
+              width={160}
               height={50}
               priority
             />
@@ -99,7 +98,15 @@ export default function Navbar() {
           </Button>
         </Box>
 
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            gap: 2,
+            width: 160,
+            justifyContent: 'flex-end',
+            pr: 2,
+          }}
+        >
           <Typography
             onClick={() => changeLanguage('tr')}
             sx={{
