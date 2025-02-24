@@ -15,33 +15,33 @@ const projects = [
   {
     image: '/adidas.png',
     title: 'Adidas atık ürünlerinden ileri dönüşüm projeleri',
-    link: '#',
+    link: '/cooperation',
   },
   {
     image: '/nike.png',
     title: 'Nike atık ürünlerinden ileri dönüşüm projeleri',
-    link: '#',
+    link: '/cooperation',
   },
   {
     image: '/levis.png',
     title:
       "Levi's atık ürünlerinden Fırat Neziroğlu kişisel tekniği ile dokunan sanat eseri",
-    link: '#',
+    link: '/cooperation',
   },
   {
     image: '/algida.png',
     title: 'Algida çubuklarından ileri dönüşüm Dokuma Tezgahı',
-    link: '#',
+    link: '/cooperation',
   },
   {
     image: '/60yil.png',
     title: '60. yıl Özel Tasarımı',
-    link: '#',
+    link: '/tilia',
   },
   {
     image: '/miss.png',
     title: 'Kainat Güzellik Yarışması Türkiye Ulusal Kostümleri',
-    link: '#',
+    link: '/cooperation',
   },
 ];
 
