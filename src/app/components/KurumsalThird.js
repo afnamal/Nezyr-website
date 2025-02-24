@@ -23,7 +23,7 @@ export default function KurumsalThird() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        py: 6,
+        py:12,
       }}
     >
       <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
@@ -37,27 +37,27 @@ export default function KurumsalThird() {
             justifyContent: 'flex-start',
           }}
         >
-          <Typography variant="h4" sx={{ color: '#000' }}>
+          <Typography variant="h5" sx={{ color: '#000' , fontWeight:"bold", ml:1}}>
             {t('inspired_by_art')}
           </Typography>
-          <Typography variant="h4" sx={{ color: '#000' }}>
+          <Typography variant="h5" sx={{ color: '#000', fontWeight:"bold", ml:1}}>
             {t('corporate_collaborations')}
           </Typography>
         </Grid>
         <Grid item xs={12} md={8}>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 2 }}
+            sx={{ color: '#333', fontSize: '18px', mb: 4, textAlign:'justify'}}
           >
             {t('corporate_products_desc')}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 2 }}
+            sx={{ color: '#333', fontSize: '18px', mb: 4 , textAlign:'justify'}}
           >
             {t('firat_neziroglu_desc')}
           </Typography>
-          <Typography variant="body1" sx={{ color: '#333', fontSize: '18px' }}>
+          <Typography variant="body1" sx={{ color: '#333', fontSize: '18px', textAlign:'justify' }}>
             {t('halkbank_project_desc')}
           </Typography>
         </Grid>

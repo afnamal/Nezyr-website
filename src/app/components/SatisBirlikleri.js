@@ -10,8 +10,8 @@ const logoGroups = [
 export default function SatisIsBirlikleri() {
   const { t } = useTranslation('common');
   return (
-    <Container sx={{ textAlign: 'center', py: 6 }}>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
+    <Container sx={{ textAlign: 'center', py: 35, mb: -25 }}>
+      <Typography variant="h4" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
         {t('SATIŞ İŞ BİRLİKLERİ')}
       </Typography>
 

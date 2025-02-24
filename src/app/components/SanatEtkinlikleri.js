@@ -13,7 +13,9 @@ export default function SanatEtkinlikleri() {
 
       <Typography
         variant="body1"
-        sx={{ mb: 4, color: 'gray', lineHeight: 1.6 }}
+        sx={{ mb: 4, color: 'gray', lineHeight: 1.6,textAlign:'justify' ,
+          
+        }}
       >
         {t('art_events_description')}
       </Typography>

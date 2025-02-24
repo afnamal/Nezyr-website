@@ -12,7 +12,7 @@ export default function SanatSection() {
         sx={{
           width: '100%',
           position: 'relative',
-          height: { xs: '200px', md: '400px' },
+          height: { xs: '200px', md: '300px' },
           minHeight: '200px',
         }}
       >
@@ -33,11 +33,12 @@ export default function SanatSection() {
         <Typography
           variant="h5"
           fontWeight="bold"
-          sx={{ mb: 2, color: 'black' }}
+          sx={{ mb: 5, color: 'black' }}
         >
           {t('nezyr_art')}
         </Typography>
-        <Typography variant="body1" sx={{ color: '#444', margin: '0 auto' }}>
+        <Typography variant="body1" sx={{color: '#444', margin: '0 auto', ml:6, mr:6, textAlign:'justify',
+          wordSpacing:3.5 }}>
           {t('nezyr_art_description')}
         </Typography>
       </Container>

@@ -11,7 +11,6 @@ export default function Sanat() {
       <OzelProjeler />
       <ModaProjeleri />
       <SanatEtkinlikleri />
-      <AllBrands />
     </>
   );
 }

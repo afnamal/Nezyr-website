@@ -69,7 +69,7 @@ export default function Navbar() {
             sx={{
               color: 'black',
               fontWeight: pathname == '/kurumsal' ? 'bold' : 'normal',
-              fontSize: '16px',
+              fontSize: '14px',
             }}
           >
             {t('corporate')}
@@ -79,8 +79,9 @@ export default function Navbar() {
             href="/sanat"
             sx={{
               color: 'black',
+              fontFamily :'Helvetica',
               fontWeight: pathname == '/sanat' ? 'bold' : 'normal',
-              fontSize: '16px',
+              fontSize: '14px',
             }}
           >
             {t('art')}
@@ -91,7 +92,7 @@ export default function Navbar() {
             sx={{
               color: 'black',
               fontWeight: pathname == '/moda' ? 'bold' : 'normal',
-              fontSize: '16px',
+              fontSize: '14px',
             }}
           >
             {t('fashion')}
@@ -111,7 +112,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
-              fontWeight: 'bold',
+              fontSize:'14px',
               color: language === 'tr' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
@@ -119,7 +120,7 @@ export default function Navbar() {
                   ? {
                       content: '"•"',
                       position: 'absolute',
-                      bottom: '-10px',
+                      bottom: '-15px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                     }
@@ -132,7 +133,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
-              fontWeight: 'bold',
+              fontSize:'14px',
               color: language === 'en' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
@@ -140,7 +141,7 @@ export default function Navbar() {
                   ? {
                       content: '"•"',
                       position: 'absolute',
-                      bottom: '-10px',
+                      bottom: '-15px',
                       left: '50%',
                       transform: 'translateX(-50%)',
                     }

@@ -29,7 +29,11 @@ export default function ModaProjeleri() {
           </Box>
           <Typography
             variant="body1"
-            sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
+            sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+              textAlign: 'justify',
+              wordSpacing:4,
+              lineHeight: 1.8,
+             }}
           >
             {t('queen_elizabeth_portrait')}
           </Typography>
@@ -55,7 +59,11 @@ export default function ModaProjeleri() {
           </Box>
           <Typography
             variant="body1"
-            sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
+            sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+              textAlign: 'justify',
+              lineHeight: 1.8,
+              wordSpacing:4,
+             }}
           >
             {t('new_york_fashion_week')}
           </Typography>

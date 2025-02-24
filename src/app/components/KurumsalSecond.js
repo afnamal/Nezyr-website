@@ -16,7 +16,7 @@ export default function KurumsalSecond() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        py: 4,
+        py: 10,
       }}
     >
       <Grid container sx={{ maxWidth: '1400px' }}>
@@ -33,7 +33,7 @@ export default function KurumsalSecond() {
         >
           <Box>
             <Typography
-              variant="h5"
+              variant="h6"
               fontWeight="bold"
               sx={{ color: '#000', mb: 1 }}
             >

@@ -52,7 +52,7 @@ export default function KurumsalFourth() {
     <Box
       sx={{
         width: '100%',
-        py: 6,
+        py: 0,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -118,26 +118,6 @@ export default function KurumsalFourth() {
           </Grid>
         ))}
       </Grid>
-
-      <Button
-        variant="outlined"
-        sx={{
-          mt: 4,
-          px: 4,
-          py: 1,
-          border: '1px solid black',
-          color: '#000',
-          fontWeight: 'bold',
-          fontSize: '16px',
-          textTransform: 'none',
-          '&:hover': {
-            backgroundColor: '#000',
-            color: '#fff',
-          },
-        }}
-      >
-        Tüm İş Birliklerini Gör
-      </Button>
     </Box>
   );
 }

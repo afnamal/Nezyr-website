@@ -9,7 +9,7 @@ export default function OzelProjeler() {
   return (
     <Box
       sx={{
-        py: 8,
+        py: 14,
         textAlign: 'center',
       }}
     >
@@ -17,7 +17,7 @@ export default function OzelProjeler() {
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ mb: 6, textAlign: 'center', color: 'black' }}
+          sx={{ mb: 6, ml:10, textAlign: 'center', color: 'black' }}
         >
           {t('special_projects')}
         </Typography>
@@ -43,7 +43,11 @@ export default function OzelProjeler() {
             </Box>
             <Typography
               variant="body1"
-              sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
+              sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+                textAlign: 'justify',
+                lineHeight: 1.8,
+                wordSpacing:4,
+              }}
             >
               {t('special_projects_description_1')}
             </Typography>
@@ -68,7 +72,11 @@ export default function OzelProjeler() {
             </Box>
             <Typography
               variant="body1"
-              sx={{ mt: 2, textAlign: 'left', color: 'gray', maxWidth: '100%' }}
+              sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+                lineHeight: 1.8,
+                textAlign: 'justify',
+                wordSpacing:4,
+              }}
             >
               {t('special_projects_description_2')}
             </Typography>

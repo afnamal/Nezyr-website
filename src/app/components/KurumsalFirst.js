@@ -82,19 +82,19 @@ export default function KurumsalFirst() {
         <Typography
           variant="h5"
           fontWeight="bold"
-          sx={{ mb: 2, color: 'black', textAlign: 'center' }}
+          sx={{ mb: 5, color: 'black', textAlign: 'center' }}
         >
           {t('corporate_partnerships')}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: 'gray', fontSize: '16px', lineHeight: 1.6 }}
+          sx={{ color: 'gray', fontSize: '16px', ml:2, mr:2, lineHeight: 1.8, wordSpacing: 5 ,textAlign: 'justify'}}
         >
           {t('corporate_desc_1')}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: 'gray', fontSize: '16px', mt: 2, lineHeight: 1.6 }}
+          sx={{ color: 'gray', fontSize: '16px', mt: 2, ml:2, mr:2, lineHeight: 1.8, textAlign: 'justify',wordSpacing: 5 }}
         >
           {t('corporate_desc_2')}
         </Typography>
