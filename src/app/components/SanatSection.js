@@ -8,21 +8,28 @@ export default function SanatSection() {
 
   return (
     <Box>
-      <Box sx={{ width: '100%', position: 'relative', height: '400px' }}>
+      <Box
+        sx={{
+          width: '100%',
+          position: 'relative',
+          height: { xs: '200px', md: '400px' },
+          minHeight: '200px',
+        }}
+      >
         <Image
           src="/sanat-image.png"
           alt="Nezyr Sanat"
-          layout="fill"
-          objectFit="cover"
+          width={1920}
+          height={800}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
         />
       </Box>
 
-      <Container
-        sx={{
-          py: 6,
-          textAlign: 'center',
-        }}
-      >
+      <Container sx={{ py: { xs: 4, md: 6 }, textAlign: 'center' }}>
         <Typography
           variant="h5"
           fontWeight="bold"

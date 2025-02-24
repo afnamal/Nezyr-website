@@ -43,7 +43,7 @@ export default function ContactForm() {
           backgroundColor: 'rgba(255, 253, 253, 0.65)',
           backdropFilter: 'blur(3px)',
           padding: '40px',
-          borderRadius: '10px',
+          borderRadius: '3px',
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
           width: '90%',
           maxWidth: '500px',
@@ -84,7 +84,7 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                   backgroundColor: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '3px',
                   fontSize: '14px',
                 }}
               />
@@ -96,7 +96,7 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                   backgroundColor: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '3px',
                   fontSize: '14px',
                 }}
               />
@@ -110,7 +110,7 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                   backgroundColor: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '3px',
                   fontSize: '14px',
                 }}
               />
@@ -124,7 +124,7 @@ export default function ContactForm() {
                 variant="outlined"
                 sx={{
                   backgroundColor: 'white',
-                  borderRadius: '6px',
+                  borderRadius: '3px',
                   fontSize: '14px',
                 }}
               />
