@@ -41,8 +41,9 @@ export default function ContactForm() {
         sx={{
           position: 'relative',
           backgroundColor: 'rgba(255, 253, 253, 0.65)',
-          padding: '100px',
-          borderRadius: '0px',
+          backdropFilter: 'blur(3px)',
+          padding: '40px',
+          borderRadius: '3px',
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
           width: '90%',
           maxWidth: '500px',
