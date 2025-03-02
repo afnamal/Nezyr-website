@@ -77,7 +77,7 @@ export default function ContactForm() {
           </Typography>
 
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
                 label={t('name')}
@@ -89,7 +89,7 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
                 label={t('surname')}
