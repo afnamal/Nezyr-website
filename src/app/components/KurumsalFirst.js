@@ -2,6 +2,7 @@
 import { Grid, Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function KurumsalFirst() {
   const { t } = useTranslation('common');
@@ -88,13 +89,15 @@ export default function KurumsalFirst() {
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: 'gray', fontSize: '16px', ml:2, mr:2, lineHeight: 1.8, wordSpacing: 5 ,textAlign: 'justify'}}
+          sx={{ color: 'gray', fontSize: '16px', ml:2, mr:2, lineHeight: 1.8,
+           wordSpacing: 5 ,textAlign: 'justify',color: '#373634'}}
         >
           {t('corporate_desc_1')}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: 'gray', fontSize: '16px', mt: 2, ml:2, mr:2, lineHeight: 1.8, textAlign: 'justify',wordSpacing: 5 }}
+          sx={{ color: 'gray', fontSize: '16px', mt: 2, ml:2, mr:2, lineHeight: 1.8,
+             textAlign: 'justify',wordSpacing: 5,color: '#373634' }}
         >
           {t('corporate_desc_2')}
         </Typography>

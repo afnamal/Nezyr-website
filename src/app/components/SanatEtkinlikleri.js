@@ -1,19 +1,20 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function SanatEtkinlikleri() {
   const { t } = useTranslation('common');
 
   return (
     <Container sx={{ py: 8, textAlign: 'center', maxWidth: '900px' }}>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 2, color: '#000' }}>
+      <Typography variant="h5" fontWeight="bold" sx={{ mb: 6, color: '#000',}}>
         {t('nezyr_art_events')}
       </Typography>
 
       <Typography
         variant="body1"
-        sx={{ mb: 4, color: 'gray', lineHeight: 1.6,textAlign:'justify' ,
+        sx={{ mb: 4, color: '#171614', lineHeight: 1.6,textAlign:'justify' ,
           
         }}
       >

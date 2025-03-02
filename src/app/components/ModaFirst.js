@@ -2,13 +2,19 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function ModaFirst() {
   const { t } = useTranslation('common');
 
   return (
-    <Container sx={{ textAlign: 'center', py: 6 }}>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
+    <Container spacing={0}
+    sx={{ textAlign: 'center',
+          py: 11,
+          backgroundColor: '#F9FAFB',
+          width: '150%',
+          }}>
+      <Typography variant="h5" fontWeight="bold" sx={{ mb: 8, color: 'black',fontSize: '28px' }}>
         {t('nezyr_corporate_fashion')}
       </Typography>
 
@@ -17,10 +23,11 @@ export default function ModaFirst() {
           <Typography
             variant="body1"
             sx={{
-              color: '#333',
+              textAlign: 'justify',
+              color: '#171614',
               fontSize: '16px',
-              textAlign: 'left',
-              lineHeight: 1.6,
+              lineHeight: 1.8,
+              wordSpacing: 4,
             }}
           >
             {t('corporate_fashion_description')}

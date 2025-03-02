@@ -3,6 +3,7 @@ import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function KurumsalSecond() {
   const { t } = useTranslation('common');
@@ -16,7 +17,7 @@ export default function KurumsalSecond() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        py: 10,
+        py: 12,
       }}
     >
       <Grid container sx={{ maxWidth: '1400px' }}>
@@ -41,7 +42,7 @@ export default function KurumsalSecond() {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ color: 'gray', fontSize: '18px' }}
+              sx={{ color: '#373634', fontSize: '18px' }}
             >
               {t('corporate_projects')}
             </Typography>
@@ -55,6 +56,7 @@ export default function KurumsalSecond() {
         >
           <Box
             sx={{
+              mr: 10,
               position: 'relative',
               width: '100%',
               maxWidth: '500px',

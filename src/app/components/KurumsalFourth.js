@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const projects = [
   {
@@ -51,8 +52,10 @@ export default function KurumsalFourth() {
   return (
     <Box
       sx={{
+        mt: -24,
+        backgroundColor: '#F9FAFB',
         width: '100%',
-        py: 0,
+        py: 29,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

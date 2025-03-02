@@ -2,17 +2,18 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function AyricalikliSatis() {
   const { t } = useTranslation('common');
 
   return (
-    <Container sx={{ py: 6 }}>
+    <Container sx={{ py: 8 }}>
       <Typography
         variant="h5"
         fontWeight="bold"
         textAlign="center"
-        sx={{ mb: 4, color: 'black' }}
+        sx={{ mb: 8, color: 'black' }}
       >
         {t('exclusive_sales_partnerships')}
       </Typography>
@@ -21,7 +22,7 @@ export default function AyricalikliSatis() {
         <Grid item xs={12} md={6}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <Box sx={{ width: '100%', height: '100%', display: 'flex' }}>
+              <Box sx={{ width: '100%', height: '100%', display: 'flex',ml:-13 }}>
                 <Image
                   src="/satis1.png"
                   alt="Satış Görsel 1"
@@ -35,11 +36,11 @@ export default function AyricalikliSatis() {
             <Grid
               item
               xs={6}
-              sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+              sx={{ display: 'flex', flexDirection: 'column', gap: 2,ml: -13 }}
             >
               <Box sx={{ width: '100%', height: '100%' }}>
                 <Image
-                  src="/satis2.png"
+                  src="/satis3.png"
                   alt="Satış Görsel 2"
                   layout="responsive"
                   width={200}
@@ -47,9 +48,9 @@ export default function AyricalikliSatis() {
                   objectFit="cover"
                 />
               </Box>
-              <Box sx={{ width: '100%', height: '100%' }}>
+              <Box sx={{ width: '100%', height: '100%',mt: 0 }}>
                 <Image
-                  src="/satis3.png"
+                  src="/satis2.png"
                   alt="Satış Görsel 3"
                   layout="responsive"
                   width={200}
@@ -61,27 +62,27 @@ export default function AyricalikliSatis() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} ml={-5}>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '16px', lineHeight: 1.6 }}
+            sx={{ color: '#171614', fontSize: '16px',mb: 4, lineHeight: 1.6,wordSpacing:3,textAlign:'justify' }}
           >
             {t('exclusive_sales_description_1')}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '16px', mt: 2, lineHeight: 1.6 }}
+            sx={{ color: '#171614', fontSize: '16px', mt: 2, lineHeight: 1.6,wordSpacing:1,textAlign:'justify' }}
           >
             {t('exclusive_sales_description_2')}
           </Typography>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4,ml:-8 }}>
             <Image
               src="/logos.png"
               alt="İş Birliği Logoları"
               layout="intrinsic"
-              width={400}
-              height={100}
+              width={500}
+              height={200}
             />
           </Box>
         </Grid>

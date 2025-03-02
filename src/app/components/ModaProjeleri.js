@@ -2,6 +2,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function ModaProjeleri() {
   const { t } = useTranslation('common');
@@ -29,7 +30,7 @@ export default function ModaProjeleri() {
           </Box>
           <Typography
             variant="body1"
-            sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+            sx={{ mt: 5, textAlign: 'left', color: '#171614', maxWidth: '100%',
               textAlign: 'justify',
               wordSpacing:4,
               lineHeight: 1.8,
@@ -59,7 +60,7 @@ export default function ModaProjeleri() {
           </Box>
           <Typography
             variant="body1"
-            sx={{ mt: 5, textAlign: 'left', color: 'gray', maxWidth: '100%',
+            sx={{ mt: 5, textAlign: 'left', color: '#171614', maxWidth: '100%',
               textAlign: 'justify',
               lineHeight: 1.8,
               wordSpacing:4,

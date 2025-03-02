@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const projects = [
   {
@@ -71,16 +72,18 @@ export default function AllBrands() {
   return (
     <Box
       sx={{
+        backgroundColor: '#F9FAFB',
         width: '100%',
         py: 6,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        mb: 5,
       }}
     >
-      <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
+      <Grid container spacing={4} sx={{ maxWidth: '1200px',ml: 4, mr:4 }}>
         {projects.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={2} md={4} key={index}>
             <Card
               sx={{
                 p: 2,

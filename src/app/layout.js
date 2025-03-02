@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import ContactForm from './components/ContractForm';
 import Footer from './components/Footer';
 import { Providers } from './providers';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],

@@ -2,6 +2,8 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 const logoGroups = [
   { src: '/satisBirlikleri.png', alt: 'Logolar Grubu 1' },
   { src: '/satisBirlikleri2.png', alt: 'Logolar Grubu 2' },
@@ -10,8 +12,8 @@ const logoGroups = [
 export default function SatisIsBirlikleri() {
   const { t } = useTranslation('common');
   return (
-    <Container sx={{ textAlign: 'center', py: 35, mb: -25 }}>
-      <Typography variant="h4" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
+    <Container sx={{ textAlign: 'center', py: 35, mb: -25,mt:-20 }}>
+      <Typography variant="h4" fontWeight="bold" sx={{ mb: 4, color: 'black'}}>
         {t('SATIŞ İŞ BİRLİKLERİ')}
       </Typography>
 

@@ -2,6 +2,7 @@
 import { Box, Typography, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function KurumsalThird() {
   const { t, i18n } = useTranslation('common');
@@ -19,6 +20,7 @@ export default function KurumsalThird() {
     <Box
       key={key}
       sx={{
+        backgroundColor: '#F9FAFB',
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
@@ -26,7 +28,7 @@ export default function KurumsalThird() {
         py:12,
       }}
     >
-      <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
+      <Grid container spacing={4} sx={{ maxWidth: '1200px' ,}}>
         <Grid
           item
           xs={12}
@@ -47,17 +49,17 @@ export default function KurumsalThird() {
         <Grid item xs={12} md={8}>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 4, textAlign:'justify'}}
+            sx={{ color: '#333', fontSize: '18px', mb: 4,mr: 3, textAlign:'justify'}}
           >
             {t('corporate_products_desc')}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 4 , textAlign:'justify'}}
+            sx={{ color: '#333', fontSize: '18px', mb: 4 ,mr: 3, textAlign:'justify'}}
           >
             {t('firat_neziroglu_desc')}
           </Typography>
-          <Typography variant="body1" sx={{ color: '#333', fontSize: '18px', textAlign:'justify' }}>
+          <Typography variant="body1" sx={{ color: '#333', fontSize: '18px',mr: 3,mb: -10, textAlign:'justify' }}>
             {t('halkbank_project_desc')}
           </Typography>
         </Grid>
