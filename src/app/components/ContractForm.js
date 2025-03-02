@@ -17,7 +17,7 @@ export default function ContactForm() {
       sx={{
         position: 'relative',
         width: '100%',
-        height: '100vh',
+        minHeight: '100vh',
         backgroundImage: "url('/bg.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -25,28 +25,20 @@ export default function ContactForm() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '20px',
+        padding: { xs: '5px', md: '10px' },
       }}
     >
       <Box
-        sx={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-        }}
-      ></Box>
-
-      <Container
         maxWidth="md"
         sx={{
           position: 'relative',
-          backgroundColor: 'rgba(255, 253, 253, 0.65)',
-          padding: '40px',
-          borderRadius: '0px',
+          backgroundColor: 'rgba(255, 253, 253, 0.85)',
+          padding: { xs: '20px', md: '40px' },
+          borderRadius: '10px',
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
-          width: '90%',
-          maxWidth: '500px',
-          minHeight: '600px',
+          width: '95%',
+          maxWidth: '1200px',
+          minHeight: { xs: 'auto', md: '600px' },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -55,7 +47,7 @@ export default function ContactForm() {
       >
         <Box
           sx={{
-            width: { xs: '100%', md: '70%' },
+            width: { xs: '100%', md: '75%' },
             textAlign: 'center',
           }}
         >
@@ -63,14 +55,23 @@ export default function ContactForm() {
             variant="h5"
             fontWeight="bold"
             textAlign="center"
-            sx={{ mb: 2, color: '#000' }}
+            sx={{
+              mb: { xs: 1, md: 2 },
+              color: '#000',
+              fontSize: { xs: '20px', md: '24px' },
+            }}
           >
             {t('contact_us')}
           </Typography>
+
           <Typography
             variant="body1"
             textAlign="center"
-            sx={{ mb: 4, color: '#444', fontSize: '14px' }}
+            sx={{
+              mb: { xs: 2, md: 4 },
+              color: '#444',
+              fontSize: { xs: '12px', md: '14px' },
+            }}
           >
             {t('contact_description')}
           </Typography>
@@ -100,7 +101,6 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
@@ -114,7 +114,6 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
@@ -128,7 +127,6 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-
             <Grid item xs={12}>
               <TextField
                 fullWidth
@@ -143,7 +141,6 @@ export default function ContactForm() {
                 }}
               />
             </Grid>
-
             <Grid
               item
               xs={12}
@@ -157,12 +154,10 @@ export default function ContactForm() {
                   backgroundColor: '#000',
                   color: '#fff',
                   fontWeight: 'bold',
-                  padding: '12px',
+                  padding: { xs: '10px', md: '12px' },
                   maxWidth: '140px',
-                  fontSize: '14px',
-                  '&:hover': {
-                    backgroundColor: '#444',
-                  },
+                  fontSize: { xs: '12px', md: '14px' },
+                  '&:hover': { backgroundColor: '#444' },
                 }}
               >
                 {t('send')}
@@ -170,7 +165,7 @@ export default function ContactForm() {
             </Grid>
           </Grid>
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 }
