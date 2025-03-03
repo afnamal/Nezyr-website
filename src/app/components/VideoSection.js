@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function VideoSection() {
   const { t } = useTranslation('common');
@@ -26,7 +26,7 @@ export default function VideoSection() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          mb:8
+          mb: 8,
         }}
       >
         <iframe
@@ -39,11 +39,11 @@ export default function VideoSection() {
           allowFullScreen
         ></iframe>
       </Box>
-      <Box sx={{ mt: 7 , ml:16, mr:16,}}>
+      <Box sx={{ mt: 7 }}>
         <Typography
           variant="body1"
           sx={{
-            mt:4,
+            mt: 4,
             textAlign: 'justify',
             margin: '0 auto',
             color: '#333',
@@ -57,26 +57,14 @@ export default function VideoSection() {
           variant="body1"
           sx={{
             mt: 2,
-            mb: 4,
-            textAlign: 'justify',
-            margin: '0 auto',
-            color: '#333',
-            lineHeight: 1.6,
-          }}
-        >
-          {t('video_description_2')}
-        </Typography>
-
-        <Typography
-          variant="body1"
-          sx={{
-            mt: 2,
             textAlign: 'justify',
             margin: '0 auto',
             color: '#373634',
           }}
         >
-          {t('video_description_3')}
+          {t('video_description_3').split('Balance – Denge')[0]}
+          <strong>Balance – Denge</strong>
+          {t('video_description_3').split('Balance – Denge')[1]}
         </Typography>
       </Box>
     </Container>

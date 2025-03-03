@@ -2,7 +2,7 @@
 import { Box, Typography, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function KurumsalThird() {
   const { t, i18n } = useTranslation('common');
@@ -25,10 +25,12 @@ export default function KurumsalThird() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        py:12,
+        py: 12,
+        pr: 1,
+        pl: 1,
       }}
     >
-      <Grid container spacing={4} sx={{ maxWidth: '1200px' ,}}>
+      <Grid container spacing={4} sx={{ maxWidth: '1200px' }}>
         <Grid
           item
           xs={12}
@@ -39,27 +41,54 @@ export default function KurumsalThird() {
             justifyContent: 'flex-start',
           }}
         >
-          <Typography variant="h5" sx={{ color: '#000' , fontWeight:"bold", ml:1}}>
+          <Typography
+            variant="h5"
+            sx={{ color: '#000', fontWeight: 'bold', ml: 1 }}
+          >
             {t('inspired_by_art')}
           </Typography>
-          <Typography variant="h5" sx={{ color: '#000', fontWeight:"bold", ml:1}}>
+          <Typography
+            variant="h5"
+            sx={{ color: '#000', fontWeight: 'bold', ml: 1 }}
+          >
             {t('corporate_collaborations')}
           </Typography>
         </Grid>
         <Grid item xs={12} md={8}>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 4,mr: 3, textAlign:'justify'}}
+            sx={{
+              color: '#333',
+              fontSize: '18px',
+              mb: 4,
+              mr: 3,
+              textAlign: 'justify',
+            }}
           >
             {t('corporate_products_desc')}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '18px', mb: 4 ,mr: 3, textAlign:'justify'}}
+            sx={{
+              color: '#333',
+              fontSize: '18px',
+              mb: 4,
+              mr: 3,
+              textAlign: 'justify',
+            }}
           >
             {t('firat_neziroglu_desc')}
           </Typography>
-          <Typography variant="body1" sx={{ color: '#333', fontSize: '18px',mr: 3,mb: -10, textAlign:'justify' }}>
+          <Typography
+            variant="body1"
+            sx={{
+              color: '#333',
+              fontSize: '18px',
+              mr: 3,
+              mb: -10,
+              textAlign: 'justify',
+            }}
+          >
             {t('halkbank_project_desc')}
           </Typography>
         </Grid>

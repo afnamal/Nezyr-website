@@ -3,7 +3,7 @@ import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function KurumsalSecond() {
   const { t } = useTranslation('common');
@@ -56,7 +56,6 @@ export default function KurumsalSecond() {
         >
           <Box
             sx={{
-              mr: 10,
               position: 'relative',
               width: '100%',
               maxWidth: '500px',

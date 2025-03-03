@@ -2,7 +2,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function OzelProjeler() {
   const { t } = useTranslation('common');
@@ -18,7 +18,7 @@ export default function OzelProjeler() {
         <Typography
           variant="h4"
           fontWeight="bold"
-          sx={{ mb: 6, ml:10, textAlign: 'center', color: 'black' }}
+          sx={{ mb: 6, textAlign: 'center', color: 'black' }}
         >
           {t('special_projects')}
         </Typography>
@@ -44,10 +44,14 @@ export default function OzelProjeler() {
             </Box>
             <Typography
               variant="body1"
-              sx={{ mt: 5, textAlign: 'left', color: '#171614', maxWidth: '100%',
+              sx={{
+                mt: 5,
+                textAlign: 'left',
+                color: '#171614',
+                maxWidth: '100%',
                 textAlign: 'justify',
                 lineHeight: 1.8,
-                wordSpacing:4,
+                wordSpacing: 4,
               }}
             >
               {t('special_projects_description_1')}
@@ -73,10 +77,14 @@ export default function OzelProjeler() {
             </Box>
             <Typography
               variant="body1"
-              sx={{ mt: 5, textAlign: 'left', color: '#171614', maxWidth: '100%',
+              sx={{
+                mt: 5,
+                textAlign: 'left',
+                color: '#171614',
+                maxWidth: '100%',
                 lineHeight: 1.8,
                 textAlign: 'justify',
-                wordSpacing:4,
+                wordSpacing: 4,
               }}
             >
               {t('special_projects_description_2')}
