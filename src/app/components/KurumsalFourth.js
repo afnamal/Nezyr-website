@@ -10,8 +10,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { useRouter } from 'next/navigation';
 const projects = [
   {
     image: '/adidas.png',
@@ -48,7 +47,7 @@ const projects = [
 
 export default function KurumsalFourth() {
   const { t } = useTranslation('common');
-
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -86,8 +85,10 @@ export default function KurumsalFourth() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={index == 5 ? 240 : 80}
-                  height={index != 5 ? 50 : 40}
+                  width={
+                    index === 5 ? 160 : index === 2 ? 120 : index == 4 ? 60 : 80
+                  }
+                  height={index !== 5 ? 50 : index == 3 ? 60 : 30}
                 />
               </Box>
               <CardContent
@@ -121,6 +122,26 @@ export default function KurumsalFourth() {
           </Grid>
         ))}
       </Grid>
+      <Button
+        variant="outlined"
+        onClick={() => router.push('/cooperation')}
+        sx={{
+          mt: 4,
+          px: 4,
+          py: 1,
+          border: '1px solid black',
+          color: '#000',
+          fontWeight: 'bold',
+          fontSize: '16px',
+          textTransform: 'none',
+          '&:hover': {
+            backgroundColor: '#000',
+            color: '#fff',
+          },
+        }}
+      >
+        Tüm İş Birliklerini Gör
+      </Button>
     </Box>
   );
 }

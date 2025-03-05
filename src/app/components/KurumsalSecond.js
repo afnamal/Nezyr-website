@@ -20,7 +20,7 @@ export default function KurumsalSecond() {
         py: 12,
       }}
     >
-      <Grid container sx={{ maxWidth: '1400px' }}>
+      <Grid container sx={{ maxWidth: '1500px' }}>
         <Grid
           item
           xs={12}

@@ -55,7 +55,7 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={160}
+              width={200}
               height={50}
               priority
             />
@@ -79,7 +79,7 @@ export default function Navbar() {
             href="/sanat"
             sx={{
               color: 'black',
-              fontFamily :'Helvetica',
+              fontFamily: 'Helvetica',
               fontWeight: pathname == '/sanat' ? 'bold' : 'normal',
               fontSize: '14px',
             }}
@@ -112,7 +112,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
-              fontSize:'14px',
+              fontSize: '14px',
               color: language === 'tr' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
@@ -133,7 +133,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
-              fontSize:'14px',
+              fontSize: '14px',
               color: language === 'en' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
