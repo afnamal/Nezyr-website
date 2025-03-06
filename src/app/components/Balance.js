@@ -1,11 +1,11 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Balance() {
   return (
-    <Box sx={{ py: 8, textAlign: 'center' }}>
+    <Box sx={{ py: 4, textAlign: 'center' }}>
       <Container maxWidth="lg">
         <Grid container spacing={2} justifyContent="center">
           <Grid
@@ -58,9 +58,9 @@ export default function Balance() {
         <Typography
           variant="body1"
           sx={{
-            mt: 4,
+            mt: 10,
             textAlign: 'left',
-            color: 'gray',
+            color: '#333',
             mx: 'auto',
           }}
         >
@@ -68,23 +68,23 @@ export default function Balance() {
           isimli özel tasarım sandalye; üzerinde barındırdığı motiflerle
           hayatın, evrenin ve geleceğin dengesini yansıtıyor.
           <br />
-          <br />
           Sanatçının günün 3 hali olan; sabah, öğle ve akşamı temsil eden
           seçtiği özel kumaşlar ve motiflerle tasarlanan özel sandalye aynı
           zamanda deneyimlendiğinde vücuda masaj yapan ergonomik bir yapıya da
-          sahip.
-          <br />
-          <br />
-          Tasarımındaki şıklığın yanı sıra, fonksiyonelliğin ön planda olduğu
-          sandalyenin bir diğer özelliği ise alt bölümünde günlük
+          sahip. Tasarımındaki şıklığın yanı sıra, fonksiyonelliğin ön planda
+          olduğu sandalyenin bir diğer özelliği ise alt bölümünde günlük
           ihtiyaçlarınızı ve çalışma argümanlarınızı koyabileceğiniz "Kişisel
           Alan" ve özellikle çalışanların bilgisayar kullanımını özel üretim
           Mouse-bileklik yer alıyor.
           <br />
-          <br />
           Geçmişi geleceğe bağlayan Balance-Denge; Da Vinci’nin dengesini,
           Matisse’in renklerini ve Dali’nin füturistik yaklaşımını Fırat
-          Neziroğlu’nun tasarımında topluyor.
+          Neziroğlu’nun tasarımında topluyor.İnsana, tasarıma ve dünyaya
+          gösterdiği özenle 60 yılı aşkın süredir kalıcı değerler üreten
+          Tilia’nın; aynı değerlerle buluştuğu sanatçı Fırat Neziroğlu ile
+          gerçekleştirdiği işbirliği; tasarımı, malzemesi ve ulaşılabilirliği
+          ile üzerine düşünülmüş hayat kalitenizi arttırmak için standartların
+          üzerinde bir tasarım olarak karşımıza çıkıyor.
         </Typography>
       </Container>
     </Box>

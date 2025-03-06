@@ -46,7 +46,7 @@ export default function Navbar() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          height: '100px',
+          height: '70px',
           px: 4,
         }}
       >
@@ -55,8 +55,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={200}
-              height={50}
+              width={160}
+              height={40}
               priority
             />
           </Link>

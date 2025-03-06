@@ -86,7 +86,17 @@ export default function KurumsalFourth() {
                   src={project.image}
                   alt={project.title}
                   width={
-                    index === 5 ? 160 : index === 2 ? 120 : index == 4 ? 60 : 80
+                    index === 5
+                      ? 160
+                      : index === 2
+                      ? 120
+                      : index == 4
+                      ? 60
+                      : index == 3
+                      ? 90
+                      : index == 1
+                      ? 90
+                      : 80
                   }
                   height={index !== 5 ? 50 : index == 3 ? 60 : 30}
                 />

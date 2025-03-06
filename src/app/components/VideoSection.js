@@ -11,14 +11,14 @@ export default function VideoSection() {
       <Typography variant="body2" sx={{ color: 'gray', mb: 1 }}>
         {t('video_date')}
       </Typography>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 6, color: 'black' }}>
+      <Typography variant="h5" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
         {t('firat_neziroglu_tilia')}
       </Typography>
 
       <Box
         sx={{
           width: '100%',
-          maxWidth: '600px',
+          maxWidth: '700px',
           margin: '0 auto',
           aspectRatio: '16/9',
           backgroundColor: '#000',
@@ -26,7 +26,6 @@ export default function VideoSection() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          mb: 8,
         }}
       >
         <iframe
@@ -59,7 +58,7 @@ export default function VideoSection() {
             mt: 2,
             textAlign: 'justify',
             margin: '0 auto',
-            color: '#373634',
+            color: '#333',
           }}
         >
           {t('video_description_3').split('Balance – Denge')[0]}
