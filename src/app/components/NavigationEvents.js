@@ -8,29 +8,24 @@ export default function NavigationEvents() {
   const { setLoading } = useLoading();
 
   useEffect(() => {
-    const handleStart = () => {
+    const startLoading = () => {
       setLoading(true);
     };
 
-    const handleStop = () => {
+    const stopLoading = () => {
       setLoading(false);
     };
 
-    // Listen for route changes
-    document.addEventListener('routeChangeStart', handleStart);
-    document.addEventListener('routeChangeComplete', handleStop);
-    document.addEventListener('routeChangeError', handleStop);
+    // Add loading indicator when navigation starts
+    startLoading();
+
+    // Remove loading indicator when navigation completes
+    const timeoutId = setTimeout(stopLoading, 500);
 
     return () => {
-      document.removeEventListener('routeChangeStart', handleStart);
-      document.removeEventListener('routeChangeComplete', handleStop);
-      document.removeEventListener('routeChangeError', handleStop);
+      clearTimeout(timeoutId);
+      stopLoading();
     };
-  }, [setLoading]);
-
-  // Reset loading state when pathname changes
-  useEffect(() => {
-    setLoading(false);
   }, [pathname, setLoading]);
 
   return null;

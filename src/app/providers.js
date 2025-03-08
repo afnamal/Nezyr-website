@@ -6,7 +6,9 @@ import i18n from './i18n';
 import theme from './theme'; // MUI teması
 import { createContext, useState, useContext } from 'react';
 import LoadingSpinner from './components/LoadingSpinner';
+
 const LoadingContext = createContext();
+
 export function Providers({ children }) {
   const [loading, setLoading] = useState(false);
 
