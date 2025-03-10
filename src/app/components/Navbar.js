@@ -47,7 +47,7 @@ export default function Navbar() {
           display: 'flex',
           justifyContent: 'space-between',
           height: '70px',
-          px: 4,
+          pt: 2,
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -55,7 +55,7 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={160}
+              width={120}
               height={40}
               priority
             />
@@ -168,7 +168,7 @@ export default function Navbar() {
           '& .MuiDrawer-paper': {
             width: '100%',
             backgroundColor: 'white',
-            padding: 2,
+            pt: 2,
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
@@ -181,8 +181,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={100}
-              height={50}
+              width={120}
+              height={40}
               priority
             />
           </Link>

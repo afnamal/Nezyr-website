@@ -6,7 +6,7 @@ import i18n from './i18n';
 import theme from './theme'; // MUI teması
 import { createContext, useState, useContext } from 'react';
 import LoadingSpinner from './components/LoadingSpinner';
-
+import LoadingBar from './components/LoadingBar';
 const LoadingContext = createContext();
 
 export function Providers({ children }) {
@@ -17,7 +17,12 @@ export function Providers({ children }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <LoadingContext.Provider value={{ loading, setLoading }}>
-          {loading && <LoadingSpinner />}
+          {loading && (
+            <>
+              <LoadingBar />
+              <LoadingSpinner />
+            </>
+          )}
           {children}
         </LoadingContext.Provider>
       </ThemeProvider>

@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import { Providers } from './providers';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import NavigationEvents from './components/NavigationEvents';
-import LoadingBar from './components/LoadingBar';
 import { Suspense } from 'react';
 
 const geistSans = Geist({
@@ -34,7 +33,6 @@ export default function RootLayout({ children }) {
         <Providers>
           <Suspense fallback={null}>
             <NavigationEvents />
-            <LoadingBar />
           </Suspense>
           <Navbar />
           <main style={{ marginTop: '85px' }}>{children}</main>

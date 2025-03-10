@@ -34,7 +34,7 @@ export default function ContactForm() {
           position: 'relative',
           backgroundColor: 'rgba(255, 253, 253, 0.85)',
           padding: { xs: '20px', md: '40px' },
-          borderRadius: '10px',
+          borderRadius: '4px',
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)',
           width: '95%',
           maxWidth: '1200px',
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 label={t('message')}
                 variant="outlined"
                 multiline
-                rows={4}
+                rows={6}
                 sx={{
                   backgroundColor: 'white',
                   borderRadius: '6px',
