@@ -28,14 +28,24 @@ export default function Footer() {
           alignItems: 'center',
           width: '75%',
           marginTop: '20px',
-          gap: { xs: '15px', md: '0px' },
+          gap: { xs: '20px', md: '0px' },
         }}
       >
+        {/* İletişim Bilgileri */}
         <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <Typography variant="body1" fontWeight="bold" color="black">
+          <Typography 
+            variant="body1" 
+            fontWeight="bold" 
+            color="black" 
+            mb={1.5}
+          >
             {t('contact')}
           </Typography>
-          <Typography color="black" variant="body2">
+          <Typography 
+            color="black" 
+            variant="body2"
+            mb={1.5}
+          >
             0212 345 56 67
           </Typography>
           <Typography color="black" variant="body2">
@@ -43,7 +53,14 @@ export default function Footer() {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', gap: '15px', justifyContent: 'center' }}>
+        {/* Sosyal Medya İkonları */}
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            gap: '20px', // Aralarındaki boşluk artırıldı
+            justifyContent: 'center' 
+          }}
+        >
           <a
             href="https://instagram.com"
             target="_blank"
@@ -52,8 +69,8 @@ export default function Footer() {
             <img
               src="/instagram.png"
               alt="Instagram"
-              width="24"
-              height="24"
+              width="32" // Boyut büyütüldü
+              height="32"
               style={{ cursor: 'pointer' }}
             />
           </a>
@@ -65,8 +82,8 @@ export default function Footer() {
             <img
               src="/linkedin.png"
               alt="LinkedIn"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               style={{ cursor: 'pointer' }}
             />
           </a>
@@ -74,8 +91,8 @@ export default function Footer() {
             <img
               src="/twitter.png"
               alt="Twitter"
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               style={{ cursor: 'pointer' }}
             />
           </a>

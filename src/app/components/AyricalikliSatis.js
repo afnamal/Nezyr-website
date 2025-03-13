@@ -7,27 +7,50 @@ export default function AyricalikliSatis() {
   const { t } = useTranslation('common');
 
   return (
-    <Container sx={{ py: 6 }}>
+    <Container
+      sx={{
+        py: 8,
+        maxWidth: '100% !important',
+        pl: { xs: 0, md: 0 },
+      }}
+    >
       <Typography
-        variant="h5"
+        variant="h6"
         fontWeight="bold"
         textAlign="center"
-        sx={{ mb: 4, color: 'black' }}
+        sx={{ mb: 8, color: 'black' }}
       >
         {t('exclusive_sales_partnerships')}
       </Typography>
 
       <Grid container spacing={4} alignItems="center">
-        <Grid item xs={12} md={6}>
-          <Grid container spacing={2}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            pl: 0,
+            ml: 0,
+            display: 'flex',
+            justifyContent: 'flex-start',
+          }}
+        >
+          <Grid container spacing={2} sx={{ justifyContent: 'flex-start' }}>
             <Grid item xs={6}>
-              <Box sx={{ width: '100%', height: '100%', display: 'flex' }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  maxWidth: { xs: '100%', sm: '100%', md: '100%' },
+                  height: '100%',
+                  display: 'flex',
+                }}
+              >
                 <Image
                   src="/satis1.png"
                   alt="Satış Görsel 1"
                   layout="responsive"
-                  width={400}
-                  height={500}
+                  width={450}
+                  height={550}
                   objectFit="cover"
                 />
               </Box>
@@ -35,25 +58,45 @@ export default function AyricalikliSatis() {
             <Grid
               item
               xs={6}
-              sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2,
+                justifyContent: 'flex-start',
+                ml: 0,
+                pl: 0,
+              }}
             >
-              <Box sx={{ width: '100%', height: '100%' }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  maxWidth: { xs: '100%', sm: '100%', md: '100%' },
+                  height: '100%',
+                }}
+              >
                 <Image
-                  src="/satis2.png"
+                  src="/satis3.png"
                   alt="Satış Görsel 2"
                   layout="responsive"
-                  width={200}
-                  height={250}
+                  width={250}
+                  height={300}
                   objectFit="cover"
                 />
               </Box>
-              <Box sx={{ width: '100%', height: '100%' }}>
+              <Box
+                sx={{
+                  width: '100%',
+                  maxWidth: { xs: '100%', sm: '100%', md: '100%' },
+                  height: '100%',
+                  mt: 0,
+                }}
+              >
                 <Image
-                  src="/satis3.png"
+                  src="/satis2.png"
                   alt="Satış Görsel 3"
                   layout="responsive"
-                  width={200}
-                  height={250}
+                  width={250}
+                  height={300}
                   objectFit="cover"
                 />
               </Box>
@@ -64,24 +107,55 @@ export default function AyricalikliSatis() {
         <Grid item xs={12} md={6}>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '16px', lineHeight: 1.6 }}
+            sx={{
+              mb: 4,
+              lineHeight: 1.6,
+              wordSpacing: 3,
+              textAlign: 'justify',
+              px: 2,
+
+              color: 'rgba(23, 22, 20, 0.75)',
+            }}
           >
             {t('exclusive_sales_description_1')}
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: '#333', fontSize: '16px', mt: 2, lineHeight: 1.6 }}
+            sx={{
+              mt: 2,
+              lineHeight: 1.6,
+              wordSpacing: 1,
+              textAlign: 'justify',
+              px: 2,
+              color: 'rgba(23, 22, 20, 0.75)',
+            }}
           >
             {t('exclusive_sales_description_2')}
           </Typography>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mt: 4,
+              px: 4,
+              gap: 2,
+              flexDirection: { xs: 'column', md: 'row' },
+            }}
+          >
             <Image
-              src="/logos.png"
+              src="/ayricalikFirst.png"
               alt="İş Birliği Logoları"
               layout="intrinsic"
-              width={400}
-              height={100}
+              width={350}
+              height={200}
+            />
+            <Image
+              src="/ayricalikSecond.png"
+              alt="İş Birliği Logoları"
+              layout="intrinsic"
+              width={350}
+              height={200}
             />
           </Box>
         </Grid>

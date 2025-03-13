@@ -7,8 +7,23 @@ export default function SanatTImg() {
   const { t } = useTranslation('common');
 
   return (
-    <Box sx={{ width: '100%', textAlign: 'center', py: 4 }}>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 2, color: 'black' }}>
+    <Box 
+      sx={{ 
+        width: '100%', 
+        textAlign: 'center', 
+        py: { xs: 2, sm: 3, md: 5 }, // Üst ve alt boşluğu artırdım, mobilde daha az
+        backgroundColor: '#F9FAFB',
+      }}
+    >
+      <Typography 
+        variant="h5" 
+        fontWeight="bold" 
+        sx={{ 
+          mt: { xs: 3, sm: 4, md: 5 }, // Başlığın üst boşluğunu artırdım
+          mb: { xs: 3, sm: 5, md: 6 }, // Başlığın alt boşluğunu artırdım
+          color: 'black' 
+        }}
+      >
         {t('inspired_by_art')} <br /> {t('corporate_partnerships')}
       </Typography>
 

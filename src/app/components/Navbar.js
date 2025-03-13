@@ -10,12 +10,13 @@ import {
   ListItem,
   ListItemText,
   Typography,
+  useTheme,
+  useMediaQuery,
 } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { usePathname } from 'next/navigation';
 
@@ -24,6 +25,8 @@ export default function Navbar() {
   const [language, setLanguage] = useState(i18n.language || 'tr');
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -46,8 +49,8 @@ export default function Navbar() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          height: '100px',
-          px: 4,
+          height: '70px',
+          mt: 1,
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -55,8 +58,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="NEZYR Logo"
-              width={160}
-              height={50}
+              width={isMobile ? 100 : 160}
+              height={isMobile ? 30 : 40}
               priority
             />
           </Link>
@@ -79,7 +82,7 @@ export default function Navbar() {
             href="/sanat"
             sx={{
               color: 'black',
-              fontFamily :'Helvetica',
+              fontFamily: 'Helvetica',
               fontWeight: pathname == '/sanat' ? 'bold' : 'normal',
               fontSize: '14px',
             }}
@@ -112,7 +115,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('tr')}
             sx={{
               cursor: 'pointer',
-              fontSize:'14px',
+              fontSize: '14px',
               color: language === 'tr' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
@@ -133,7 +136,7 @@ export default function Navbar() {
             onClick={() => changeLanguage('en')}
             sx={{
               cursor: 'pointer',
-              fontSize:'14px',
+              fontSize: '14px',
               color: language === 'en' ? 'black' : 'gray',
               position: 'relative',
               '&::after':
@@ -156,7 +159,7 @@ export default function Navbar() {
           sx={{ display: { xs: 'flex', md: 'none' } }}
           onClick={toggleMenu}
         >
-          <MenuIcon sx={{ fontSize: 32, color: 'black' }} />
+          <Image src="/navbarIcon.png" alt="Menu" width={40} height={40} />
         </IconButton>
       </Toolbar>
 
@@ -168,10 +171,10 @@ export default function Navbar() {
           '& .MuiDrawer-paper': {
             width: '100%',
             backgroundColor: 'white',
-            padding: 2,
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
+            pt: 3,
             position: 'relative',
           },
         }}
@@ -182,12 +185,12 @@ export default function Navbar() {
               src="/logo.png"
               alt="NEZYR Logo"
               width={100}
-              height={50}
+              height={30}
               priority
             />
           </Link>
           <IconButton onClick={toggleMenu}>
-            <CloseIcon sx={{ fontSize: 32, color: 'black' }} />
+            <CloseIcon sx={{ fontSize: 32, color: 'black', mt: -1 }} />
           </IconButton>
         </Box>
 

@@ -6,25 +6,23 @@ export default function VideoSection() {
   const { t } = useTranslation('common');
 
   return (
-    <Container sx={{ textAlign: 'center', py: 6 }}>
-      <Typography variant="body2" sx={{ color: 'gray', mb: 1 }}>
+    <Container sx={{ textAlign: 'center', py: 5, backgroundColor: '#FCFCFC' }}>
+      <Typography variant="body2" sx={{ color: '#333', mb: 1 }}>
         {t('video_date')}
       </Typography>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
+      <Typography variant="h6" fontWeight="bold" sx={{ mb: 4, color: 'black' }}>
         {t('firat_neziroglu_tilia')}
       </Typography>
 
       <Box
         sx={{
           width: '100%',
-          maxWidth: '900px',
+          maxWidth: '700px',
           margin: '0 auto',
           aspectRatio: '16/9',
-          backgroundColor: '#000',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '8px',
           overflow: 'hidden',
         }}
       >
@@ -38,28 +36,33 @@ export default function VideoSection() {
           allowFullScreen
         ></iframe>
       </Box>
-      <Box sx={{ mt: 7 }}>
+      <Box
+        sx={{
+          mt: 7,
+          maxWidth: '1000px',
+          mx: 'auto',
+          px: { xs: 0, sm: 5, md: 8 },
+        }}
+      >
         <Typography
           variant="body1"
           sx={{
-            mt: 4,
+            color: 'rgba(23, 22, 20, 0.75)',
+            mt: 10,
             textAlign: 'justify',
-            margin: '0 auto',
             color: '#333',
-            lineHeight: 1.6,
+            lineHeight: 1.8,
           }}
         >
           {t('video_description_1')}
         </Typography>
-
         <Typography
           variant="body1"
           sx={{
-            mt: 2,
+            color: 'rgba(23, 22, 20, 0.75)',
             textAlign: 'justify',
-            margin: '0 auto',
             color: '#333',
-            lineHeight: 1.6,
+            lineHeight: 1.8,
           }}
         >
           {t('video_description_2')}
@@ -68,14 +71,16 @@ export default function VideoSection() {
         <Typography
           variant="body1"
           sx={{
-            mt: 2,
+            color: 'rgba(23, 22, 20, 0.75)',
+            mt: 4,
             textAlign: 'justify',
-            margin: '0 auto',
             color: '#333',
-            fontWeight: 'bold',
+            lineHeight: '1.8',
           }}
         >
-          {t('video_description_3')}
+          {t('video_description_3').split('Balance – Denge')[0]}
+          <strong>Balance – Denge</strong>
+          {t('video_description_3').split('Balance – Denge')[1]}
         </Typography>
       </Box>
     </Container>
