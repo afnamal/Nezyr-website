@@ -16,7 +16,6 @@ export default function Balance() {
         }}
       >
         <Grid container spacing={0} justifyContent="flex-start">
-          {/* İlk iki resim yan yana olacak */}
           <Grid
             item
             xs={6}

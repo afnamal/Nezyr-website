@@ -2,6 +2,7 @@
 import { Box, Typography, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function KurumsalThird() {
   const { t, i18n } = useTranslation('common');

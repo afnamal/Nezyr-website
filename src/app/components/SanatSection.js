@@ -2,6 +2,7 @@
 import { Box, Container, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function SanatSection() {
   const { t } = useTranslation('common');
@@ -33,22 +34,22 @@ export default function SanatSection() {
         <Typography
           variant="h5"
           fontWeight="bold"
-          sx={{ mb: 5, color: 'black',fontSize: { xs: '20px', md: '24px' }, }}
+          sx={{ mb: 5, color: 'black', fontSize: { xs: '20px', md: '24px' } }}
         >
           {t('nezyr_art')}
         </Typography>
         <Typography
-            variant="body1"
-            sx={{
-              fontSize: { xs: '16px', md: '18px' }, // Mobilde 16px, Masaüstünde 18px
-              margin: '0 auto',
-              mx: { xs: 2, sm: 3, md: 4 }, // Mobilde daha dar, büyük ekranlarda geniş margin
-              textAlign: 'justify',
-              lineHeight: 1.8,
-              wordSpacing: 3.5,
-              color: 'rgba(23, 22, 20, 0.7)',
-            }}
-          >
+          variant="body1"
+          sx={{
+            fontSize: { xs: '16px', md: '18px' },
+            margin: '0 auto',
+            mx: { xs: 2, sm: 3, md: 4 },
+            textAlign: 'justify',
+            lineHeight: 1.8,
+            wordSpacing: 3.5,
+            color: 'rgba(23, 22, 20, 0.7)',
+          }}
+        >
           {t('nezyr_art_description')}
         </Typography>
       </Container>

@@ -1,6 +1,7 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function VideoSection() {
   const { t } = useTranslation('common');

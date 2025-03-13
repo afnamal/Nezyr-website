@@ -2,6 +2,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function OzelProjeler() {
   const { t } = useTranslation('common');
@@ -17,7 +18,12 @@ export default function OzelProjeler() {
         <Typography
           variant="h5"
           fontWeight="bold"
-          sx={{ mb: 6, textAlign: 'center', color: 'black',fontSize: { xs: '20px', md: '24px' }, }}
+          sx={{
+            mb: 6,
+            textAlign: 'center',
+            color: 'black',
+            fontSize: { xs: '20px', md: '24px' },
+          }}
         >
           {t('special_projects')}
         </Typography>
@@ -41,13 +47,16 @@ export default function OzelProjeler() {
               />
             </Box>
             <Typography
-             variant="body1"
-             sx={{ mt: 5, textAlign: 'left',maxWidth: '100%',
-               color: 'rgba(23, 22, 20, 0.75)',
-               textAlign: 'justify',
-               fontSize:'18',
-               wordSpacing:4,
-               lineHeight: 1.8,
+              variant="body1"
+              sx={{
+                mt: 5,
+                textAlign: 'left',
+                maxWidth: '100%',
+                color: 'rgba(23, 22, 20, 0.75)',
+                textAlign: 'justify',
+                fontSize: '18',
+                wordSpacing: 4,
+                lineHeight: 1.8,
               }}
             >
               {t('special_projects_description_1')}
@@ -74,14 +83,17 @@ export default function OzelProjeler() {
             </Box>
             <Typography
               variant="body1"
-              sx={{ mt: 5, textAlign: 'left', maxWidth: '100%',
+              sx={{
+                mt: 5,
+                textAlign: 'left',
+                maxWidth: '100%',
                 color: 'rgba(23, 22, 20, 0.75)',
                 textAlign: 'justify',
-                fontSize:'18',
-                wordSpacing:4,
+                fontSize: '18',
+                wordSpacing: 4,
                 lineHeight: 1.8,
-               }}
-             > 
+              }}
+            >
               {t('special_projects_description_2')}
             </Typography>
           </Grid>

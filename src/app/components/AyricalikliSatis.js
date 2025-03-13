@@ -2,6 +2,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function AyricalikliSatis() {
   const { t } = useTranslation('common');

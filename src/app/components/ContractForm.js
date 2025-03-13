@@ -14,11 +14,10 @@ import { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
 
-
 export default function ContactForm() {
   const { t } = useTranslation('common');
-  const [selectedCode, setSelectedCode] = useState("+90");
-  const countryCodes = ["+90", "+1", "+44", "+49", "+33"]; // Seçilebilir alan kodları
+  const [selectedCode, setSelectedCode] = useState('+90');
+  const countryCodes = ['+90', '+1', '+44', '+49', '+33']; // Seçilebilir alan kodları
   const handlePhoneChange = (e) => {
     setFormData((prev) => ({ ...prev, phone: e.target.value }));
   };
@@ -98,7 +97,6 @@ export default function ContactForm() {
             {t('contact_us')}
           </Typography>
           <Grid container spacing={2}>
-            {/* Ad */}
             <Grid item xs={12} md={6}>
               <TextField
                 label="Adınız"
@@ -109,24 +107,23 @@ export default function ContactForm() {
                 onChange={handleChange}
                 sx={{
                   backgroundColor: 'white',
-                  mt: 1.5, 
+                  mt: 1.5,
                   fontSize: '12px',
                   border: '1px solid #ccc',
                   '& .MuiInputBase-root': {
                     borderRadius: '0px',
                     backgroundColor: 'white !important',
                   },
-                  "& .MuiFilledInput-root:after": {
-                    borderBottom: "none !important",
-                    boxShadow: "none !important",
-                  }, 
+                  '& .MuiFilledInput-root:after': {
+                    borderBottom: 'none !important',
+                    boxShadow: 'none !important',
+                  },
                   '&:hover, & .MuiInputBase-root:hover': {
                     backgroundColor: 'white !important',
                   },
                 }}
               />
             </Grid>
-            {/* Soyad */}
             <Grid item xs={12} md={6}>
               <TextField
                 label="Soyadınız"
@@ -137,24 +134,23 @@ export default function ContactForm() {
                 onChange={handleChange}
                 sx={{
                   backgroundColor: 'white',
-                  mt: 1.5, 
+                  mt: 1.5,
                   fontSize: '12px',
                   border: '1px solid #ccc',
                   '& .MuiInputBase-root': {
                     borderRadius: '0px',
                     backgroundColor: 'white !important',
                   },
-                  "& .MuiFilledInput-root:after": {
-                    borderBottom: "none !important",
-                    boxShadow: "none !important",
-                  }, 
+                  '& .MuiFilledInput-root:after': {
+                    borderBottom: 'none !important',
+                    boxShadow: 'none !important',
+                  },
                   '&:hover, & .MuiInputBase-root:hover': {
                     backgroundColor: 'white !important',
                   },
                 }}
               />
             </Grid>
-            {/* E-Posta */}
             <Grid item xs={12} md={6}>
               <TextField
                 label="E-posta"
@@ -172,10 +168,10 @@ export default function ContactForm() {
                     borderRadius: '0px',
                     backgroundColor: 'white !important',
                   },
-                  "& .MuiFilledInput-root:after": {
-                    borderBottom: "none !important",
-                    boxShadow: "none !important",
-                  }, 
+                  '& .MuiFilledInput-root:after': {
+                    borderBottom: 'none !important',
+                    boxShadow: 'none !important',
+                  },
                   '&:hover, & .MuiInputBase-root:hover': {
                     backgroundColor: 'white !important',
                   },
@@ -183,105 +179,101 @@ export default function ContactForm() {
               />
             </Grid>
             <Grid item xs={12} md={6}>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                border: "1px solid #ccc",
-                borderRadius: "0px",
-                backgroundColor: "white",
-                "&:hover": { backgroundColor: "white" },
-              }}
-            >
-        {/* Alan Kodu Dropdown */}
-        <Select
-          value={selectedCode}
-          onChange={(e) => setSelectedCode(e.target.value)}
-          displayEmpty
-          disableUnderline
-          variant="standard"
-          sx={{
-            backgroundColor: "white",
-            borderRight: "1px solid #ccc",
-            width: "80px", // Genişlik biraz artırıldı
-            textAlign: "center",
-            fontSize: "14px",
-            height: "50px",
-            boxShadow: "none",
-            border: "none",
-            paddingLeft: "10px", // Alan kodunu biraz sağa çekmek için eklendi
-            "& .MuiSelect-select": {
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "0px",
-            },
-            "&:focus": {
-              backgroundColor: "white",
-              border: "none",
-              outline: "none",
-            },
-            "& .MuiFilledInput-root:after": {
-              borderBottom: "none !important", // Mavi çizgiyi tamamen kaldır
-              boxShadow: "none !important",
-            }, 
-          }}
-        >
-          {countryCodes.map((code) => (
-            <MenuItem key={code} value={code}>
-              {code}
-            </MenuItem>
-          ))}
-        </Select>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  border: '1px solid #ccc',
+                  borderRadius: '0px',
+                  backgroundColor: 'white',
+                  '&:hover': { backgroundColor: 'white' },
+                }}
+              >
+                <Select
+                  value={selectedCode}
+                  onChange={(e) => setSelectedCode(e.target.value)}
+                  displayEmpty
+                  disableUnderline
+                  variant="standard"
+                  sx={{
+                    backgroundColor: 'white',
+                    borderRight: '1px solid #ccc',
+                    width: '80px',
+                    textAlign: 'center',
+                    fontSize: '14px',
+                    height: '50px',
+                    boxShadow: 'none',
+                    border: 'none',
+                    paddingLeft: '10px',
+                    '& .MuiSelect-select': {
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '0px',
+                    },
+                    '&:focus': {
+                      backgroundColor: 'white',
+                      border: 'none',
+                      outline: 'none',
+                    },
+                    '& .MuiFilledInput-root:after': {
+                      borderBottom: 'none !important',
+                      boxShadow: 'none !important',
+                    },
+                  }}
+                >
+                  {countryCodes.map((code) => (
+                    <MenuItem key={code} value={code}>
+                      {code}
+                    </MenuItem>
+                  ))}
+                </Select>
 
-            {/* Telefon Numarası Input */}
-            <TextField
-              variant="filled"
-              fullWidth
-              name="phone"
-              value={formData.phone}
-              onChange={handlePhoneChange}
-              placeholder="Cep Telefonunuz"
-              sx={{
-                fontSize: "12px",
-                backgroundColor: "white",
-                "& .MuiInputBase-root": {
-                  borderRadius: "0px",
-                  backgroundColor: "white",
-                  boxShadow: "none",
-                  border: "none",
-                  display: "flex",
-                  alignItems: "center",
-                },
-                "&:hover, & .MuiInputBase-root:hover": {
-                  backgroundColor: "white",
-                },
-                "& .MuiFilledInput-root": {
-                  borderRadius: "0px",
-                  boxShadow: "none",
-                  border: "none",
-                  display: "flex",
-                  alignItems: "center",
-                },
-                "& .MuiInputBase-input": {
-                  padding: "14px 10px",
-                },
-                "&:focus": {
-                backgroundColor: "white",
-                border: "none",
-                outline: "none",
-              },
-                  
-              "& .MuiFilledInput-root:after": {
-                borderBottom: "none !important", // Mavi çizgiyi tamamen kaldır
-                boxShadow: "none !important",
-              }, 
-              }}
-            />
+                <TextField
+                  variant="filled"
+                  fullWidth
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handlePhoneChange}
+                  placeholder="Cep Telefonunuz"
+                  sx={{
+                    fontSize: '12px',
+                    backgroundColor: 'white',
+                    '& .MuiInputBase-root': {
+                      borderRadius: '0px',
+                      backgroundColor: 'white',
+                      boxShadow: 'none',
+                      border: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                    },
+                    '&:hover, & .MuiInputBase-root:hover': {
+                      backgroundColor: 'white',
+                    },
+                    '& .MuiFilledInput-root': {
+                      borderRadius: '0px',
+                      boxShadow: 'none',
+                      border: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                    },
+                    '& .MuiInputBase-input': {
+                      padding: '14px 10px',
+                    },
+                    '&:focus': {
+                      backgroundColor: 'white',
+                      border: 'none',
+                      outline: 'none',
+                    },
 
-            </Box>
-           </Grid>
-            {/* Mesaj */}
+                    '& .MuiFilledInput-root:after': {
+                      borderBottom: 'none !important',
+                      boxShadow: 'none !important',
+                    },
+                  }}
+                />
+              </Box>
+            </Grid>
             <Grid item xs={12}>
               <TextField
                 label="Mesajınız"
@@ -300,18 +292,21 @@ export default function ContactForm() {
                     borderRadius: '0px',
                     backgroundColor: 'white !important',
                   },
-                  "& .MuiFilledInput-root:after": {
-                    borderBottom: "none !important",
-                    boxShadow: "none !important",
-                  }, 
+                  '& .MuiFilledInput-root:after': {
+                    borderBottom: 'none !important',
+                    boxShadow: 'none !important',
+                  },
                   '&:hover, & .MuiInputBase-root:hover': {
                     backgroundColor: 'white !important',
                   },
                 }}
               />
             </Grid>
-            {/* Gönder Butonu */}
-            <Grid item xs={12} sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+            <Grid
+              item
+              xs={12}
+              sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}
+            >
               <Button
                 type="submit"
                 fullWidth

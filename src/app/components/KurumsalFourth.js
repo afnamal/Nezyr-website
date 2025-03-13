@@ -11,7 +11,6 @@ import {
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/navigation';
-
 const projects = [
   {
     image: '/adidas.png',

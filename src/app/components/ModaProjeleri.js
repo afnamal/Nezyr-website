@@ -2,6 +2,7 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function ModaProjeleri() {
   const { t } = useTranslation('common');
@@ -29,13 +30,17 @@ export default function ModaProjeleri() {
             />
           </Box>
           <Typography
-          variant="body1"
-          sx={{ mt: 5, textAlign: 'left', color: 'rgba(23, 22, 20, 0.8)', maxWidth: '100%',
-            textAlign: 'justify',
-            fontSize:'18',
-            wordSpacing:4,
-            lineHeight: 1.8,
-           }}
+            variant="body1"
+            sx={{
+              mt: 5,
+              textAlign: 'left',
+              color: 'rgba(23, 22, 20, 0.8)',
+              maxWidth: '100%',
+              textAlign: 'justify',
+              fontSize: '18',
+              wordSpacing: 4,
+              lineHeight: 1.8,
+            }}
           >
             {t('queen_elizabeth_portrait')}
           </Typography>
@@ -60,12 +65,16 @@ export default function ModaProjeleri() {
           </Box>
           <Typography
             variant="body1"
-            sx={{ mt: 5, textAlign: 'left',color: 'rgba(23, 22, 20, 0.8)', maxWidth: '100%',
+            sx={{
+              mt: 5,
+              textAlign: 'left',
+              color: 'rgba(23, 22, 20, 0.8)',
+              maxWidth: '100%',
               textAlign: 'justify',
-              wordSpacing:4,
-              fontSize:'18',
+              wordSpacing: 4,
+              fontSize: '18',
               lineHeight: 1.8,
-             }}
+            }}
           >
             {t('new_york_fashion_week')}
           </Typography>
